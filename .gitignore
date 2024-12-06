@@ -1,0 +1,17 @@
+*.f*
+*aux
+*logs
+*aux
+*bbl
+*bcf
+*blg
+*gz
+*lof
+*log
+*lot
+*out
+*toc
+*xml
+*xml
+*xdv
+*fls
