@@ -1,17 +1,15 @@
-\ProvidesPackage{general_preamble}
-
 % DOCUMENT STYLE
 \usepackage[a4paper,
-  left=2cm, right=2cm, top=2.7cm, bottom=2.5cm,
+  left=1.5cm, right=1.5cm, top=2.7cm, bottom=2cm,
   headsep=\dimexpr2.5cm-55pt\relax,
   headheight=55pt]{geometry}
 \linespread{1.5}                                    % regulate line spacing
 \usepackage{setspace}
 \usepackage[parfill]{parskip}                       % remove indentation of first line
 \usepackage[T1]{fontenc}
-\usepackage{soul}
 \usepackage{xcolor}
 \usepackage{enumitem}
+\usepackage{float}
 
 % FONTS
 \usepackage{fontspec}
@@ -31,7 +29,7 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy} % page style to fancy to print header
 \rhead{\footnotesize \emph{Last update}: \today}
-\lhead{\footnotesize \em \nouppercase{\leftmark{} -- \rightmark}}
+\lhead{\footnotesize \em \nouppercase{\leftmark{} \textendash{} \rightmark}}
 
 % CHEMICAL FORMULAE AND SPECIAL SYMBOLS
 \usepackage[version=4]{mhchem}
@@ -39,7 +37,7 @@
 \usepackage{siunitx}
 \sisetup{
   detect-all = true,                                    % detect and follow surrounding font changes
-  range-phrase= --, range-units = single,               % set range format
+  range-phrase= \textendash{}, range-units = single,               % set range format
   per-mode = symbol,                                    % set "/" as format for fraction units
   uncertainty-mode = separate,                          % seprate uncertainty (+-) from number
   separate-uncertainty-units = single,                  % put units only after uncertainty
@@ -57,7 +55,7 @@
 \DeclareSIUnit{\molar}{M}                         % define unit for molar cocnentration (M)
 
 \newcommand{\per}{$\times$}
-\newcommand{\NA}{--}
+\newcommand{\NA}{\textendash{}}
 \newcommand{\doublecurlyquotes}[1]{“#1”}
 \newcommand{\singlecurlyquotes}[1]{‘#1’}
 \newcommand{\curlyapostrophe}{’}
@@ -84,9 +82,9 @@
 \newcommand{\halfhour}{\qty{30}{\minute}}
 
 % reagents
-\newcommand{\pbs}{\num{1}\per{} PBS}
-\newcommand{\hs}{\num{0.25}\per{} HS}
-\newcommand{\ssct}{\num{5}\per{} SSCT}
+\newcommand{\pbs}{1\per{} PBS}
+\newcommand{\hs}{0.25\per{} HS}
+\newcommand{\ssct}{5\per{} SSCT}
 
 % others
 \newcommand{\qtytimes}[3]{#1 \per{} \qty{#2}{#3}}
@@ -112,18 +110,20 @@
  \acl[#1]{#2} [\acs[#1]{#2}]}}
 
 % DEFINE TITLE STYLES
+\makeatletter 
 \renewcommand\maketitle{
 {\begin{center}
 {\Large \bfseries \@title }\\
 {\small \emph{First created}: \DTMdisplaydate{2024}{12}{5}{-1}\hfill%
-\setstretch{1.0} \small \hfill \emph{Last update}: \today}\\[2ex]
+\setstretch{1.0} \small \hfill \emph{Last update}: \today}
 %{\Large  \@author}\\[4ex] 
 \end{center}}} % Note the extra }
+\makeatother
 
 \usepackage{titlesec}
 %\titleformat{⟨command⟩}[⟨shape⟩]{⟨format⟩}{⟨label⟩}{⟨sep⟩}{⟨before-code⟩}[⟨after-code⟩]
 \titleformat{\section}{\large\bfseries\uppercase}{\thesection}{}{\centering}
-\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{}{}
 
 % DEFINE BUTTON-STYLE BOXES
 %\usepackage{tcolorbox}
@@ -131,7 +131,7 @@
 
 %\newcommand{\insertboxes}[3]{{\bfseries \tcbox{#1} \tcbox{#2} \tcbox{#3}}}
 
-% DEFINE EMPHASIS LEFT RULE
+% DEFINE LEFT EMPHASIS-RULE
 \usepackage{mdframed}
 \newmdenv[
   topline=false,
@@ -143,5 +143,5 @@
 
 % STEP SYNTAX
 % wash steps: #1=action; #2=time; #3=quantity; #4=reagent; #5=temperature
-\newcommand{\step}[5]{\MakeUppercase #1 samples for \ul{#2} with #3 of \textbf{#4} at #5.}
+\newcommand{\step}[5]{\MakeUppercase #1 samples for \underline{#2} with #3 of \textbf{#4} at #5.}
 \newcommand{\note}[1]{{\itshape \small \textcolor{gray}{Note: #1}}}
