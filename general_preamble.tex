@@ -31,6 +31,15 @@
 \rhead{\footnotesize \emph{Last update}: \today}
 \lhead{\footnotesize \em \nouppercase{\leftmark{} \textendash{} \rightmark}}
 
+% BIBLIOGRAPHY AND HYPERREFS
+\usepackage{nameref}
+\usepackage[hidelinks]{hyperref}
+\usepackage[style=apa, sorting=ynt, uniquename=false]{biblatex}
+\newcommand{\ulhref}[2]{\href{#1}{\underline{#2}}}                              % declare command to make hyperlinks underlined
+\newcommand{\citebold}[1]{\textbf{\cite{#1}}}                                   % declare new command to make citations bold
+\newcommand{\citeboldyearparent}[1]{\textbf{\citeauthor*{#1} (\citeyear{#1})}}  % declare new command to make citations Author, et al . (year)
+\renewcommand\multicitedelim{\normalfont{\addsemicolon\space}}                  % set multi-citation delimiter not-bold
+
 % CHEMICAL FORMULAE AND SPECIAL SYMBOLS
 \usepackage[version=4]{mhchem}
 \usepackage{textcomp}
