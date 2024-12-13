@@ -59,6 +59,11 @@
 	\item Acetylate samples for \underline{\quarter} each with a graded series of \fivehunmicrol{} (or \onemil) \textbf{\qty{0.1}{\molar} triethanolamine containing \qtylist{0;1.5;3}{\ul\per\ml} acetic anhydride} ar RT.
 	\item \step{wash}{\qtytimes{2}{10}{\minute}}{\fivehunmicrol{} (or \onemil)}{PBST}{RT}
 	\item \step{post-fix}{\halfhour}{\fivehunmicrol{} (or \onemil)}{fixative solution}{RT}
+\end{enumerate}
+
+\bigskip\alert{Pre-heat probe-hybridization buffer to \thirtysevendegree{} (you will need \qty{700}{\ul} per tube [\fivehunmicrol for the pre-hybridization, and \qty{200}{\ul} for the probe solution]).}
+
+\begin{enumerate}[resume = steps]
 	\item \step{wash}{\qtytimes{4}{10}{\minute}}{\fivehunmicrol{} (or \onemil)}{PBST}{RT}
 \end{enumerate}
 
@@ -147,46 +152,142 @@
 \clearpage
 
 \section*{\textendash{} Recipes \textendash{}}
+\setstretch{0.95}
 \markright{\emph{Recipes}}
 
 \subsection*{Fixative solution}
 
 \begin{table}[H]
-	\setstretch{0.95}
+	%\setstretch{0.95}
 	\centering
 	\begin{tabular}{r
 		S[table-format = 4.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
 		l
-		S[table-format = 3.1, table-align-text-post = false, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 3] % disable scientific notation
+		S[table-format = 3.2, table-align-text-post = false, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 2] % disable scientific notation
 		c
 		}
 		\textbf{Compound}                        & \multicolumn{2}{c}{\textbf{Quantity}} & \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Molar mass\\ (\unit{\g\per\mole})\end{tabular}}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}c@{}}Final concentration\\ (for \qty{100}{\ml})\end{tabular}}}                        \\*[0.4cm]
 		\qtyrange{36}{38}{\percent} formaldehyde & 3.7                                   & \unit{\ml}                                                                                             & 30.031                                                                                                          & \qty{3.7}{\percent}  \\
 		\qty{25}{\percent} gluteraldehyde        & 0.2                                   & \unit{\ml}                                                                                             & 100.12                                                                                                          & \qty{0.05}{\percent} \\
-		10\per{} PBS                               & 10                                    & \unit{\ml}                                                                                             & \NA                                                                                                             & \pbs                 \\
-		Distilled water                          & 86.1                                  & \unit{\ml}                                                                                             & \NA                                                                                                             & \NA
+		10\per{} PBS                             & 10                                    & \unit{\ml}                                                                                             & \NA                                                                                                             & 1\per{}              \\
+		Ultrapure water                          & \NA                                   & \unit{\ml}                                                                                             & \NA                                                                                                             & \NA
 	\end{tabular}
 \end{table}
 
-\blindtext
+\begin{enumerate}
+	\item Add \qty{3.7}{\ml} of \qtyrange{36}{38}{\percent} formaldehyde to a graduated cylinder.
+	\item Add \qty{0.2}{\ml} of \qty{25}{\percent} gluteraldehyde to a graduated cylinder.
+	\item Fill up to \qty{100}{\ml} with ultrapure water.
+	\item Store the fixative solution at \fourdegree.
+\end{enumerate}
+
+\subsection*{0.25\per{} Holtfreter\curlyapostrophe s solution (HS)}
 
 \begin{table}[H]
 	\centering
 	\begin{tabular}{r
 		S[table-format = 4.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
 		l
-		S[table-format = 3.1, table-align-text-post = false, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 3] % disable scientific notation
+		S[table-format = 3.2, table-align-text-post = false, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 2] % disable scientific notation
 		c
 		}
-		\textbf{Compound}                        & \multicolumn{2}{c}{\textbf{Quantity}} & \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Molar mass\\ (\unit{\g\per\mole})\end{tabular}}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}c@{}}Final concentration\\ (for \qty{100}{\ml})\end{tabular}}}                        \\*[0.4cm]
-		\qtyrange{36}{38}{\percent} formaldehyde & 3.7                                   & \unit{\ml}                                                                                             & 30.031                                                                                                          & \qty{3.7}{\percent}  \\
-		\qty{25}{\percent} gluteraldehyde        & 0.2                                   & \unit{\ml}                                                                                             & 100.12                                                                                                          & \qty{0.05}{\percent} \\
-		10\per PBS                               & 10                                    & \unit{\ml}                                                                                             & 2                                                                                                               & \pbs                 \\
-		Distilled water                          & 86.1                                  & \unit{\ml}                                                                                             & 2                                                                                                               & \NA
+		\textbf{Compound} & \multicolumn{2}{c}{\textbf{Quantity}} & \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Molar mass\\ (\unit{\g\per\mole})\end{tabular}}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}c@{}}Final concentration\\ (for \qty{1}{\l})\end{tabular}}}                         \\*[0.4cm]
+		\ce{NaCl}         & 875                                   & \unit{\mg}                                                                                             & 58.44                                                                                                        & \qty{0.01}{\molar}    \\
+		\ce{KCl}          & 12.5                                  & \unit{\mg}                                                                                             & 74.55                                                                                                        & \qty{0.00002}{\molar} \\
+		\ce{CaCl2}        & 25                                    & \unit{\mg}                                                                                             & 110.98                                                                                                       & \qty{0.0002}{\molar}  \\
+		\ce{NaHCO3}       & 50                                    & \unit{\mg}                                                                                             & 84                                                                                                           & \qty{0.00006}{\molar} \\
+		Ultrapure water   & \multicolumn{2}{c}{\NA}               & \NA                                                                                                    & \NA
 	\end{tabular}
 \end{table}
 
-\blindtext
+\begin{enumerate}
+	\item Dissolve solutes in \qty{800}{\ml} of ultrapure water, by continuous stirring.
+	\item Fill up to \qty{1}{\l} with ultrapure water.
+	\item Store the \hs indefinitely at RT.
+\end{enumerate}
+
+\subsection*{\pbs{} with \qty{0.1}{\percent} Tween 20 (PBST or PTw)}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{r
+		S[table-format = 4.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
+		l
+		S[table-format = 3.2, table-align-text-post = false, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 2] % disable scientific notation
+		c
+		}
+		\textbf{Compound} & \multicolumn{2}{c}{\textbf{Quantity}} & \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Molar mass\\ (\unit{\g\per\mole})\end{tabular}}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}c@{}}Final concentration\\ (for \qty{50}{\ml})\end{tabular}}}                        \\*[0.4cm]
+		Tween 20          & 50                                    & \unit{\ul}                                                                                             & 1227.54                                                                                                        & \qty{0.01}{\percent} \\
+		20\per{} PBS      & 5                                     & \unit{\ml}                                                                                             & \NA                                                                                                            & 1\per{}              \\
+		Ultrapure water   & \multicolumn{2}{c}{\NA}               & \NA                                                                                                    & \NA
+	\end{tabular}
+\end{table}
+
+\begin{enumerate}
+	\item Add \qty{5}{\ml} of 20\per{} PBS to a graduated cylinder.
+	\item Add \qty{50}{\ul} of Tween 20.
+	\item Fill up to \qty{50}{\ml} with ultrapure water.
+\end{enumerate}
+
+\subsection*{5\per{} SSC \qty{0.1}{\percent} Tween 20 (SSCT)}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{r
+		S[table-format = 4.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
+		l
+		S[table-format = 3.2, table-align-text-post = false, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 2] % disable scientific notation
+		c
+		}
+		\textbf{Compound} & \multicolumn{2}{c}{\textbf{Quantity}} & \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Molar mass\\ (\unit{\g\per\mole})\end{tabular}}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}c@{}}Final concentration\\ (for \qty{50}{\ml})\end{tabular}}}                        \\*[0.4cm]
+		Tween 20          & 50                                    & \unit{\ul}                                                                                             & 1227.54                                                                                                        & \qty{0.01}{\percent} \\
+		20\per{} SSC      & 12.5                                  & \unit{\ml}                                                                                             & \NA                                                                                                            & 5\per{}              \\
+		Ultrapure water   & \multicolumn{2}{c}{\NA}               & \NA                                                                                                    & \NA
+	\end{tabular}
+\end{table}
+
+\begin{enumerate}
+	\item Add \qty{12.5}{\ml} of 20\per{} SSC to a graduated cylinder.
+	\item Add \qty{50}{\ul} of Tween 20.
+	\item Fill up to \qty{50}{\ml} with ultrapure water.
+\end{enumerate}
+
+\subsection*{Proteinase K working solution}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{r
+		S[table-format = 4.2, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 2]@{\,} % disable scientific notation
+		l
+		S[table-format = 3.2, table-align-text-post = false, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 2] % disable scientific notation
+		c
+		}
+		\textbf{Compound}                                                                                              & \multicolumn{2}{c}{\textbf{Quantity}} & \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Molar mass\\ (\unit{\g\per\mole})\end{tabular}}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}c@{}}Final concentration\\ (for \qty{10}{\ml})\end{tabular}}}                          \\*[0.4cm]
+		\multicolumn{1}{c}{\begin{tabular}[c]{@{}r@{}}\qty{20}{\mg\per\ml} proteinase K\\ stock solution\end{tabular}} & 3.75                                  & \unit{\ul}                                                                                             & \NA                                                                                                            & \qty{7.5}{\ug\per\ml} \\*[0.4cm]
+		PBST                                                                                                           & \multicolumn{2}{c}{\NA}               & \NA                                                                                                    & \NA
+	\end{tabular}
+\end{table}
+
+\begin{enumerate}
+	\item Add \qty{3.75}{\ul} of \qty{20}{\mg\per\ml} proteinase K stock solution to \qty{8}{\ml} of PBST.
+	\item Fill up to \qty{10}{\ml} with PBST.
+\end{enumerate}
+
+\subsection*{1:500 DAPI staining solution}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{r
+		S[table-format = 4.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
+		l
+		S[table-format = 3.2, table-align-text-post = false, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 2] % disable scientific notation
+		c
+		}
+		\textbf{Compound} & \multicolumn{2}{c}{\textbf{Quantity}} & \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Molar mass\\ (\unit{\g\per\mole})\end{tabular}}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}c@{}}Final concentration\\ (for \qty{500}{\ul})\end{tabular}}}         \\*[0.4cm]
+		DAPI              & 1                                     & \unit{\ul}                                                                                             & \NA                                                                                                             & 1:500 \\
+		\pbs{}            & 499                                   & \unit{\ul}                                                                                             & \NA                                                                                                             & \NA
+	\end{tabular}
+\end{table}
 
 \clearpage
 
