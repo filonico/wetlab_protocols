@@ -5,6 +5,17 @@
 
 \input{general_preamble}
 
+% DEFINE TITLE STYLES
+\makeatletter 
+\renewcommand\maketitle{
+{\begin{center}
+{\Large \bfseries \@title }\\
+{\small \emph{First created}: \DTMdisplaydate{2024}{12}{5}{-1}\hfill%
+\setstretch{1.0} \small \hfill \emph{Last update}: \today}
+%{\Large  \@author}\\[4ex] 
+\end{center}}} % Note the extra }
+\makeatother
+
 %-------------------------------------------------------------------------
 
 \begin{document}
@@ -61,7 +72,7 @@
 	\item \step{post-fix}{\halfhour}{\fivehunmicrol{} (or \onemil)}{fixative solution}{RT}
 \end{enumerate}
 
-\bigskip\alert{Pre-heat probe-hybridization buffer to \thirtysevendegree{} (you will need \qty{700}{\ul} per tube [\fivehunmicrol for the pre-hybridization, and \qty{200}{\ul} for the probe solution]).}
+\bigskip\alert{Pre-heat probe-hybridization buffer to \thirtysevendegree{} (you will need \qty{700}{\ul} per tube [\fivehunmicrol for the pre-hybridization, and \twohunmicrol{} for the probe solution]).}
 
 \begin{enumerate}[resume = steps]
 	\item \step{wash}{\qtytimes{4}{10}{\minute}}{\fivehunmicrol{} (or \onemil)}{PBST}{RT}
@@ -93,7 +104,7 @@
 	\item \step{wash}{\qtytimes{4}{20}{\minute}}{\fivehunmicrol}{probe wash buffer}{\thirtysevendegree}
 \end{enumerate}
 
-\bigskip\alert{Probe solution can be saved and reused for 2-3 times; store at \minustwenty.}
+\bigskip\alert{Probe solution can be saved and reused for 2--3 times; store at \minustwenty.}
 
 \begin{enumerate}[resume = steps]
 	\item \step{wash}{\qtytimes{3}{5}{\minute}}{\fivehunmicrol{} (or \onemil)}{\ssct}{RT}

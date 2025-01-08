@@ -118,17 +118,6 @@
  \glsunset{#2}%
  \acl[#1]{#2} [\acs[#1]{#2}]}}
 
-% DEFINE TITLE STYLES
-\makeatletter 
-\renewcommand\maketitle{
-{\begin{center}
-{\Large \bfseries \@title }\\
-{\small \emph{First created}: \DTMdisplaydate{2024}{12}{5}{-1}\hfill%
-\setstretch{1.0} \small \hfill \emph{Last update}: \today}
-%{\Large  \@author}\\[4ex] 
-\end{center}}} % Note the extra }
-\makeatother
-
 \usepackage{titlesec}
 %\titleformat{⟨command⟩}[⟨shape⟩]{⟨format⟩}{⟨label⟩}{⟨sep⟩}{⟨before-code⟩}[⟨after-code⟩]
 \titleformat{\section}{\large\bfseries\uppercase}{\thesection}{}{\centering}
