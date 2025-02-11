@@ -1,5 +1,5 @@
 \documentclass[10pt]{report}
-\usepackage[utf8]{inputenc}
+\usepackage[utf8x]{inputenc}
 
 \input{general_preamble}
 
@@ -8,7 +8,7 @@
 \renewcommand\maketitle{
 {\begin{center}
 {\Large \bfseries \@title }\\
-{\small \emph{First created}: \DTMdisplaydate{2024}{12}{5}{-1}\hfill%
+{\small \emph{First created}: \DTMdisplaydate{2024}{02}{11}{-1}\hfill%
 \setstretch{1.0} \small \hfill \emph{Last update}: \today}
 %{\Large  \@author}\\[4ex] 
 \end{center}}} % Note the extra }
@@ -21,66 +21,34 @@
 %\sisetup{parse-numbers = false}
 \DTMsetdatestyle{cvdateformat}
 
-\title{\vspace{-3em} Multiplexed mRNA \textit{in-situ} Hybridization Chain Reaction (HCR) in \emph{Sycon ciliatum}}
+\title{\vspace{-3em} Multiplexed mRNA \textit{in-situ} Hybridization Chain Reaction (HCR) in \emph{Drosophila melanogaster} adult brain}
 \maketitle
 \thispagestyle{plain}
-\markboth{HCR in \emph{Sycon}}{}
+\markboth{HCR in \emph{Drosophila} brain}{}
 
 \section*{\vspace{-1em} \textendash{} Protocol \textendash{}}
 \markright{Protocol}
 
-\subsection*{Day 1 \textendash{} Sample preparation (version with xylene clearing)}
+\subsection*{Day 1 \textendash{} Sample preparation}
 
-\alert{This protocol refers to samples that have been already fixed and stored in pure methanol at \minustwenty.}
-
-\begin{enumerate}[series = steps]
-	\item \step{wash}{\quarter}{\fivehunmicrol{} (or \onemil)}{\textbf{\hundredpercent{} ethanol}}{RT}
-	\item \step{clear}{\halfhour}{\fivehunmicrol{} (or \onemil)}{\textbf{\qty{50}{\percent} xylene in ethanol}}{RT}
-\end{enumerate}
-
-\bigskip\alert{Always use xylene in glass containers (as it dissolves plastic) and under a chemical safety hood.}
-
-\begin{enumerate}[resume = steps]
-	\item \step{wash}{\quarter}{\fivehunmicrol{} (or \onemil)}{ice-cold \hundredpercent{} ethanol}{\fourdegree}
-	\item Wash samples for \underline{\quarter} each with a graded series of \fivehunmicrol{} (or \onemil) \textbf{ice-cold ethanol (\qtylist{75;50;25}{\percent}) in \hs{}} at \fourdegree.
-	\item \step{wash}{\tenmin}{\fivehunmicrol{} (or \onemil)}{ice-cold \hs}{\fourdegree}
-	\item \step{wash}{\tenmin}{\fivehunmicrol{} (or \onemil)}{ice-cold \pbs}{\fourdegree}
-	\item \step{post-fix}{\halfhour}{\fivehunmicrol{} (or \onemil)}{ice-cold fixative solution}{\fourdegree}
-\end{enumerate}
-
-\bigskip\alert{Pre-heat probe-hybridization buffer to \thirtysevendegree{} (you will need \qty{700}{\ul} per tube [\fivehunmicrol for the pre-hybridization, and \qty{200}{\ul} for the probe solution]).}
-
-\begin{enumerate}[resume = steps]
-	\item \step{wash}{\qtytimes{4}{10}{\minute}}{\fivehunmicrol{} (or \onemil)}{PBST}{\fourdegree}
-\end{enumerate}
-
-\subsection*{Day 1 \textendash{} Sample preparation (version with proteinase-K permeabilisation)}
-
-\alert{This protocol refers to samples that have been already fixed and stored in pure methanol at \minustwenty.}
+\alert{For fixation and all subsequent steps, samples can be placed in Eppendorf tubes or in wells of a spot plate.}
+\alert{In each step, samples can be rocked on a nutator or on an orbital (horizontal) shaker.}
 
 \begin{enumerate}[series = steps]
-	\item \step{wash}{\quarter}{\fivehunmicrol{} (or \onemil)}{ice-cold \hundredpercent{} ethanol}{\fourdegree}
-	\item Wash samples for \underline{\quarter} each with a graded series of \fivehunmicrol{} (or \onemil) \textbf{ice-cold ethanol (\qtylist{75;50;25}{\percent}) in PBST} at \fourdegree.
-	\item \step{wash}{\quarter}{\fivehunmicrol{} (or \onemil)}{PBST}{RT}
-	\item \step{rock}{\tenmin}{\fivehunmicrol{} (or \onemil)}{\qty{7.5}{\ug\per\ml} proteinase K in PBST}{\thirtysevendegree}
-	\item \step{wash}{\tenmin}{\fivehunmicrol{} (or \onemil)}{PBST}{RT}
-	\item \step{quench}{\tenmin}{\fivehunmicrol{} (or \onemil)}{\qty{2}{\mg\per\ml} glycine in PBST}{RT}
-	\item \step{wash}{\qtytimes{3}{10}{\minute}}{\fivehunmicrol{} (or \onemil)}{PBST}{RT}
-	\item Acetylate samples for \underline{\quarter} each with a graded series of \fivehunmicrol{} (or \onemil) \textbf{\qty{0.1}{\molar} triethanolamine containing \qtylist{0;1.5;3}{\ul\per\ml} acetic anhydride} ar RT.
-	\item \step{wash}{\qtytimes{2}{10}{\minute}}{\fivehunmicrol{} (or \onemil)}{PBST}{RT}
-	\item \step{post-fix}{\halfhour}{\fivehunmicrol{} (or \onemil)}{fixative solution}{RT}
+	\item Dissect adult brains in Schneider's \textit{Drosophila} medium or in nuclease-free \pbs.
+	\item \step{fix}{\qty{20}{\minute}}{\qty{800}{\ul}}{\qty{4}{\percent} paraformaldehyde in PBST}{RT}
 \end{enumerate}
 
-\bigskip\alert{Pre-heat probe-hybridization buffer to \thirtysevendegree{} (you will need \qty{700}{\ul} per tube [\fivehunmicrol for the pre-hybridization, and \twohunmicrol{} for the probe solution]).}
-
+\bigskip\alert{Pre-heat probe-hybridization buffer to \thirtysevendegree{} (you will need \fivehunmicrol per tube [\qty{250}{\ul} for the pre-hybridization, and \qty{250}{\ul} for the probe solution]).}
+	
 \begin{enumerate}[resume = steps]
-	\item \step{wash}{\qtytimes{4}{10}{\minute}}{\fivehunmicrol{} (or \onemil)}{PBST}{RT}
+	\item \step{rinse}{3 times}{\fivehunmicrol}{PBST}{RT}
+	\item \step{wash}{\qtytimes{3}{15}{\minute}}{\fivehunmicrol}{PBST}{RT}
 \end{enumerate}
-
 
 \subsection*{Day 1 \textendash{} HCR detection stage}
 \begin{enumerate}[series = steps]
-	\item \step{pre-hybridize}{\halfhour}{\fivehunmicrol}{pre-warmed probe hybridization buffer}{\thirtysevendegree}
+	\item \step{pre-hybridize}{\halfhour}{\qty{250}{\ul}}{pre-warmed probe hybridization buffer}{\thirtysevendegree}
 \end{enumerate}
 
 \bigskip\alert{If reusing probes, pre-warm probe solution to \thirtysevendegree, then skip to Step 3.}
@@ -88,7 +56,7 @@
 \alert{At this step, samples can be stored in probe hybridization buffer at \minustwenty{} for several months.}
 
 \begin{enumerate}[resume = steps]
-	\item Prepare probe solution by adding \qty{0.8}{\ul} (\qty{0.8}{\pmol}) of each \textbf{probe set \qty{1}{\micro\molar} stock solution} to \twohunmicrol{} of \textbf{probe hybridization buffer} (final concentration of \qty{4}{\nano\molar}) at \thirtysevendegree.\\
+	\item Prepare probe solution by adding \qty{1}{\ul} (\qty{1}{\pmol}) of each \textbf{probe set \qty{1}{\micro\molar} stock solution} to \qty{250}{\ul} of \textbf{probe hybridization buffer} (final concentration of \qty{4}{\nano\molar}) at \thirtysevendegree.\\
 	      \note{if using \fivehunmicrol{} of probe solution, add \qty{2}{\ul} (\qty{2}{\pmol}) of each probe set.}
 	\item \step{incubate}{\qty{> 12}{\hour} (overnight)}{\twohunmicrol}{pre-warmed probe solution}{\thirtysevendegree}
 \end{enumerate}
@@ -98,7 +66,7 @@
 
 \subsection*{Day 2 \textendash{} HCR amplification stage}
 
-\alert{Pre-equilibrate amplification buffer to room temperature (you will need \qty{700}{\ul} per tube [\fivehunmicrol{} for pre-amplification, and \twohunmicrol{} for the hairpin solution]).}
+\alert{Pre-equilibrate amplification buffer to room temperature (you will need \qty{450}{\ul} per tube [\qty{250}{\ul} for pre-amplification, and \twohunmicrol{} for the hairpin solution]).}
 \begin{enumerate}[series = steps]
 	\item \step{wash}{\qtytimes{4}{20}{\minute}}{\fivehunmicrol}{probe wash buffer}{\thirtysevendegree}
 \end{enumerate}
@@ -107,7 +75,7 @@
 
 \begin{enumerate}[resume = steps]
 	\item \step{wash}{\qtytimes{3}{5}{\minute}}{\fivehunmicrol{} (or \onemil)}{\ssct}{RT}
-	\item \step{pre-amplify}{\halfhour}{\fivehunmicrol}{amplification buffer}{RT}
+	\item \step{pre-amplify}{\halfhour}{\qty{250}{\ul}}{amplification buffer}{RT}
 	\item Snap cool in separate tubes \qty{4}{\ul} of \textbf{hairpin H1} (\qty{30}{\pmol}) and \qty{4}{\ul} of \textbf{hairpin H2} (\qty{30}{\pmol}) \textbf{\qty{3}{\micro\molar} stock solutions}: heat at \qty{95}{\degreeCelsius} for \qty{90}{\s} and cool to RT in the dark for \halfhour.
 	      %\note{doubling hairpin concentration can help to boost signal.}
 \end{enumerate}
@@ -149,7 +117,7 @@
 \alert{At this step, samples can be stored in the dark in \qty{75}{\percent} glycerol for several month at \fourdegree.}
 
 \begin{enumerate}[resume = steps]
-	\item Collect precipitated samples from the \qty{75}{\percent} glycerol solution and place them on a cleaned (bridged, if necessary) slide.
+	\item Collect samples from the \qty{75}{\percent} glycerol solution and place them on a cleaned (bridged, if necessary) slide.
 	\item Add \qtyrange{\sim 15}{20}{\ul} of mounting medium (or VECTASHIELD\textregistered{} PLUS Antifade Mounting Medium with DAPI [H-2000]) directly on samples.
 \end{enumerate}
 
@@ -306,19 +274,10 @@
 \markright{Resources}
 
 \begin{enumerate}
-	\item \textbf{mRNA fluorescent \textit{in-situ} HCR in \textit{Sycon} spp.}
+	\item \textbf{mRNA fluorescent \textit{in-situ} HCR in \textit{Drosophila} brains.}
 		\begin{itemize}
-			\item \textbf{*}Fortunato, S., Adamski, M., Bergum, B., Guder, C., Jordal, S., Leininger, S., ... \& Adamska, M. (2012). Genome-wide analysis of the sox family in the calcareous sponge \textit{Sycon ciliatum}: multiple genes with unique expression patterns. \textit{EvoDevo}, \textit{3}, 1-11. \ulhref{https://doi.org/10.1186/2041-9139-3-14}{10.1186/2041-9139-3-14}
-			\item Voigt, O., Adamski, M., Sluzek, K., \& Adamska, M. (2014). Calcareous sponge genomes reveal complex evolution of $\alpha$-carbonic anhydrases and two key biomineralization enzymes. \textit{BMC Evolutionary Biology}, \textit{14}, 1-19. \\ \ulhref{https://doi.org/10.1186/s12862-014-0230-z}{10.1186/s12862-014-0230-z}
-			\item Voigt, O., Adamska, M., Adamski, M., Kittelmann, A., Wencker, L., \& W{\"o}rheide, G. (2017). Spicule formation in calcareous sponges: coordinated expression of biomineralization genes and spicule-type specific genes. \textit{Scientific Reports}, \textit{7}(1), 45658. \ulhref{https://doi.org/10.1038/srep45658}{10.1038/srep45658}
-		\end{itemize}
-	\item \textbf{mRNA \textit{in-situ} HCR in other sponges.}
-		\begin{itemize}
-			\item Kojima, C., \& Funayama, N. (2022). \textit{In situ} hybridization to identify stem cells in the freshwater sponge \textit{Ephydatia fluviatilis}. In: Blanchoud, S., \& Galliot, B. (eds.), \textit{Whole-Body Regeneration}, 335-346. \\ \ulhref{https://doi.org/10.1007/978-1-0716-2172-1}{10.1007/978-1-0716-2172-1}
-			\item Larroux, C., Fahey, B., Adamska, M., Richards, G. S., Gauthier, M., Green, K., \& Degnan, B. M. (2008). Whole-mount \textit{in situ} hybridization in \textit{Amphimedon}. \textit{CSH protocols}, pdb-prot5096. \ulhref{https://cshprotocols.cshlp.org/content/2008/12/pdb.prot5096}{10.1101/pdb.prot5096}
-			\item Musser, J. M., Schippers, K. J., Nickel, M., Mizzon, G., Kohn, A. B., Pape, C., \& Arendt, D. (2021). Profiling cellular diversity in sponges informs animal cell type and nervous system evolution. \textit{Science}, \textit{374}(6568), 717-723. \ulhref{https://doi.org/10.1126/science.abj2949}{10.1126/science.abj2949}
-			\item Funayama, N., Nakatsukasa, M., Hayashi, T., \& Agata, K. (2005). Isolation of the choanocyte in the fresh water sponge, \textit{Ephydatia fluviatilis} and its lineage marker, \textit{Ef annexin}. \textit{Development, growth \& differentiation}, \textit{47}(4), 243-253. \ulhref{https://doi.org/10.1111/j.1440-169X.2005.00800.x}{10.1111/j.1440-169X.2005.00800.x}
-		\end{itemize}
+			\item Ferreira, A. A., Sieriebriennikov, B., \& Whitbeck, H. (2021). HCR RNA-FISH protocol for the whole-mount brains of \textit{Drosophila} and other insects. \href{https://slack.protocols.io:8443/view/hcr-rna-fish-protocol-for-the-whole-mount-brains-o-bzh5p386.html}{https://slack.protocols.io:8443/view/hcr-rna-fish-protocol-for-the-whole-mount-brains-o-bzh5p386.html} (accessed on \DTMdisplaydate{2024}{02}{11}{-1})
+	\end{itemize}
 \end{enumerate}
 
 \clearpage
