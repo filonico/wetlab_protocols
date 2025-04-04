@@ -34,11 +34,13 @@
 \alert{In each step, samples can be rocked on a nutator or on an orbital (horizontal) shaker.}
 
 \begin{enumerate}[series = steps]
-	\item Dissect the desired aadult tissue in 100\% methanol.
+	\item Dissect the desired adult tissue in 100\% methanol.
 	\item Wash samples for \underline{\quarter} each with a graded series of \fivehunmicrol{} (or \onemil) of \textbf{methanol (\qtylist{60;30}{\percent}) in PBST}.
 	\item \step{wash}{\quarter}{\fivehunmicrol{} (or \onemil)}{PBST}{RT}
 	\item \step{rock}{\qty{2}{\minute}}{\fivehunmicrol{} (or \onemil)}{\qty{2.6}{\ug\per\ml} proteinase K}{RT}
-	\item \item \step{wash}{\quarter}{\fivehunmicrol{} (or \onemil)}{PBST}{RT}
+	\item \step{wash}{two times without incubation}{\fivehunmicrol{} (or \onemil)}{PBST}{RT}
+	\item \step{post-fix}{\halfhour}{\fivehunmicrol{} (or \onemil)}{\qty{3.7}{\percent} PFA}{RT}
+	\item \step{wash}{\qtytimes{2}{10}{\minute}}{\fivehunmicrol{} (or \onemil)}{PBST}{RT}
 \end{enumerate}
 
 \bigskip\alert{Pre-heat probe-hybridization buffer to \thirtysevendegree{} (you will need \fivehunmicrol per tube [\qty{250}{\ul} for the pre-hybridization, and \qty{250}{\ul} for the probe solution]).}
@@ -92,20 +94,13 @@
 	\item \step{wash}{\qtytimes{2}{5}{\minute}, \qtytimes{2}{30}{\minute}, and \qtytimes{1}{5}{\minute}}{\fivehunmicrol{} (or \onemil)}{\ssct}{RT}
 \end{enumerate}
 
-\bigskip\alert{Hairpin solution can be saved and reused for 2--3 times; store at \minustwenty.}
+\bigskip\alert{dsDNA can be stained on the second \qty{30}{\minute} wash by using a 1:500 DAPI solution.}
+\alert{Hairpin solution can be saved and reused for 2--3 times; store at \minustwenty.}
 \alert{At this step, samples can be stored in the dark in \ssct for several days at room temperature.}
 
 \subsection*{Day 3 \textendash{} Sample mounting}
 
 \begin{enumerate}[series = steps]
-	\item \step{wash}{\qtytimes{3}{5}{\minute}}{\fivehunmicrol{} (or \onemil)}{\pbs}{RT}
-\end{enumerate}
-
-\bigskip\alert{If using VECTASHIELD\textregistered{} PLUS Antifade Mounting Medium with DAPI (H-2000), skip directly to Step 4.}
-
-\begin{enumerate}[resume = steps]
-	\item \step{incubate}{\qty{20}{\minute}}{\fivehunmicrol{} (or \onemil)}{DAPI staining solution}{RT}
-	\item \step{wash}{\qtytimes{3}{5}{\minute}}{\fivehunmicrol{} (or \onemil)}{\pbs}{RT}
 	\item \step{incubate}{\qtyrange{30}{60}{\minute}}{\onemil}{\qty{50}{\percent} glycerol in \pbs}{RT}
 	\item \step{incubate}{\qtyrange{30}{60}{\minute}}{\onemil}{\qty{75}{\percent} glycerol in \pbs}{RT}
 \end{enumerate}
@@ -114,16 +109,30 @@
 \alert{At this step, samples can be stored in the dark in \qty{75}{\percent} glycerol for several month at \fourdegree.}
 
 \begin{enumerate}[resume = steps]
-	\item Collect precipitated samples from the \qty{75}{\percent} glycerol solution and place them on a cleaned (bridged, if necessary) slide.
+	\item Collect samples from the \qty{75}{\percent} glycerol solution and place them on a cleaned (bridged, if necessary) slide.
 	\item Add \qtyrange{\sim 15}{20}{\ul} of mounting medium (or VECTASHIELD\textregistered{} PLUS Antifade Mounting Medium with DAPI [H-2000]) directly on samples.
 \end{enumerate}
 
-\bigskip\alert{Adjust the amount of embryo suspension and mounting medium according to the cover glass dimensions, the quantity of samples, and the thickness of the bridge.}
+\bigskip\alert{Adjust the amount of mounting medium according to the cover glass dimensions, the quantity of samples, and the thickness of the bridge.}
 
 \begin{enumerate}[resume = steps]
 	\item	Seal the slide with nail polish and store in the dark at \fourdegree.
 \end{enumerate}
 
 \clearpage
+
+\section*{\textendash{} Resources \textendash{}}
+\markright{Resources}
+
+\begin{enumerate}
+	\item \textbf{ISH/IHC in \textit{Mnemiopsis leidyi}.}
+		\begin{itemize}
+			\item Burkhardt, P., Colgren, J., Medhus, A., Digel, L., Naumann, B., Soto-Angel, J. J., ... & Kittelmann, M. (2023). Syncytial nerve net in a ctenophore adds insights on the evolution of nervous systems. \textit{Science}, \textit{380}(6642), 293-297. \ulhref{https://doi.org/10.1126/science.ade5645}{10.1126/science.ade5645}
+			\item Sachkova, M. Y., Nordmann, E. L., Soto-Àngel, J. J., Meeda, Y., Górski, B., Naumann, B., ... & Burkhardt, P. (2021). Neuropeptide repertoire and 3D anatomy of the ctenophore nervous system. \textit{Current Biology}, \textit{31}(23), 5274-5285. \ulhref{https://doi.org/10.1016/j.cub.2021.09.005}{10.1016/j.cub.2021.09.005}
+		\end{itemize}
+\end{enumerate}
+
+
+\end{document}
 
 
