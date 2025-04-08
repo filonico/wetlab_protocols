@@ -31,6 +31,7 @@
 
 \subsection*{Day 1 \textendash{} Sample preparation (version with xylene clearing)}
 
+\alert{From Kojima \& Funayama, 2022.}
 \alert{This protocol refers to samples that have been already fixed and stored in pure methanol at \minustwenty.}
 
 \begin{enumerate}[series = steps]
@@ -54,16 +55,17 @@
 	\item \step{wash}{\qtytimes{4}{10}{\minute}}{\fivehunmicrol{} (or \onemil)}{PBST}{\fourdegree}
 \end{enumerate}
 
-\subsection*{Day 1 \textendash{} Sample preparation (version with proteinase-K permeabilisation)}
+\subsection*{Day 1 \textendash{} Sample preparation (version with proteinase-K permeabilisation and acetic anhydride acetylation)}
 
+\alert{From Fortunato et al., 2012; Voigt et al., 2017.}
 \alert{This protocol refers to samples that have been already fixed and stored in pure methanol at \minustwenty.}
 
 \begin{enumerate}[series = steps]
 	\item \step{wash}{\quarter}{\fivehunmicrol{} (or \onemil)}{ice-cold \hundredpercent{} ethanol}{\fourdegree}
 	\item Wash samples for \underline{\quarter} each with a graded series of \fivehunmicrol{} (or \onemil) \textbf{ice-cold ethanol (\qtylist{75;50;25}{\percent}) in PBST} at \fourdegree.
-	\item \step{wash}{\quarter}{\fivehunmicrol{} (or \onemil)}{PBST}{RT}
-	\item \step{rock}{\tenmin}{\fivehunmicrol{} (or \onemil)}{\qty{7.5}{\ug\per\ml} proteinase K in PBST}{\thirtysevendegree}
-	\item \step{wash}{\tenmin}{\fivehunmicrol{} (or \onemil)}{PBST}{RT}
+	\item \step{wash}{\qtytimes{2}{10}{\minute}}{\fivehunmicrol{} (or \onemil)}{PBST}{RT}
+	\item \step{rock}{\quarter}{\fivehunmicrol{} (or \onemil)}{\qty{7.5}{\ug\per\ml} proteinase K in PBST}{\thirtysevendegree}
+	\item \step{wash}{two times without incubation}{\fivehunmicrol{} (or \onemil)}{PBST}{RT}
 	\item \step{quench}{\tenmin}{\fivehunmicrol{} (or \onemil)}{\qty{2}{\mg\per\ml} glycine in PBST}{RT}
 	\item \step{wash}{\qtytimes{3}{10}{\minute}}{\fivehunmicrol{} (or \onemil)}{PBST}{RT}
 	\item Acetylate samples for \underline{\quarter} each with a graded series of \fivehunmicrol{} (or \onemil) \textbf{\qty{0.1}{\molar} triethanolamine containing \qtylist{0;1.5;3}{\ul\per\ml} acetic anhydride} ar RT.
@@ -74,7 +76,34 @@
 \bigskip\alert{Pre-heat probe-hybridization buffer to \thirtysevendegree{} (you will need \qty{700}{\ul} per tube [\fivehunmicrol for the pre-hybridization, and \twohunmicrol{} for the probe solution]).}
 
 \begin{enumerate}[resume = steps]
-	\item \step{wash}{\qtytimes{4}{10}{\minute}}{\fivehunmicrol{} (or \onemil)}{PBST}{RT}
+	\item \step{wash}{\qtytimes{2}{10}{\minute}}{\fivehunmicrol{} (or \onemil)}{PBST}{RT}
+\end{enumerate}
+
+\subsection*{Day 1 \textendash{} Sample preparation (version with proteinase-K permeabilisation and sodium borohydride clearing)}
+
+\alert{This protocol refers to samples that have been already fixed and stored in pure methanol at \minustwenty.}
+
+\begin{enumerate}[series = steps]
+	\item \step{wash}{\quarter}{\fivehunmicrol{} (or \onemil)}{ice-cold \hundredpercent{} ethanol}{\fourdegree}
+	\item Wash samples for \underline{\quarter} each with a graded series of \fivehunmicrol{} (or \onemil) \textbf{ice-cold ethanol (\qtylist{75;50;25}{\percent}) in PBST} at \fourdegree.
+	\item \step{wash}{\qtytimes{2}{10}{\minute}}{\fivehunmicrol{} (or \onemil)}{PBST}{RT}
+	\item \step{rock}{\quarter}{\fivehunmicrol{} (or \onemil)}{\qty{7.5}{\ug\per\ml} proteinase K in PBST}{\thirtysevendegree}
+	\item \step{wash}{two times without incubation}{\fivehunmicrol{} (or \onemil)}{PBST}{RT}
+	\item \step{wash}{\tenmin}{\fivehunmicrol{} (or \onemil)}{PBST}{RT}
+	\item \step{post-fix}{\halfhour}{\fivehunmicrol{} (or \onemil)}{fixative solution}{RT}
+\end{enumerate}
+
+\bigskip\alert{Pre-heat probe-hybridization buffer to \thirtysevendegree{} (you will need \qty{700}{\ul} per tube [\fivehunmicrol for the pre-hybridization, and \twohunmicrol{} for the probe solution]).}
+
+\begin{enumerate}[resume = steps]
+	\item \step{wash}{\qtytimes{2}{10}{\minute}}{\fivehunmicrol{} (or \onemil)}{PBST}{RT}
+	\item \step{treat}{\qty{20}{\minute}}{\fivehunmicrol{} (or \onemil)}{fresh \qty{0.1}{\percent} SBI}{RT}
+\end{enumerate}
+
+\bigskip\alert{SBI solutions should be prepared fresh, and used always under a fume hood, as it release molecular hydrogen, which is a highly flammable gas.}
+
+\begin{enumerate}[resume = steps]
+	\item \step{wash}{\qtytimes{2}{10}{\minute}}{\fivehunmicrol{} (or \onemil)}{PBST}{RT}
 \end{enumerate}
 
 
