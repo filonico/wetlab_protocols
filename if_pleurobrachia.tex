@@ -1,0 +1,190 @@
+\documentclass[10pt]{report}
+\usepackage[utf8]{inputenc}
+
+\input{general_preamble}
+
+% DEFINE TITLE STYLES
+\makeatletter 
+\renewcommand\maketitle{
+{\begin{center}
+{\Large \bfseries \@title }\\
+{\small \emph{First created}: \DTMdisplaydate{2025}{05}{19}{-1}\hfill%
+\setstretch{1.0} \small \hfill \emph{Last update}: \today}
+%{\Large  \@author}\\[4ex] 
+\end{center}}} % Note the extra }
+\makeatother
+
+%-------------------------------------------------------------------------
+
+\begin{document}
+
+%\sisetup{parse-numbers = false}
+\DTMsetdatestyle{cvdateformat}
+
+\title{\vspace{-3em} Immunofluorescence in \emph{Pleurobrachia pileus} adult tissues}
+\maketitle
+\thispagestyle{plain}
+\markboth{IF in \emph{Pleurobrachia} tissues}{}
+
+\section*{\vspace{-1em} \textendash{} Protocol \textendash{}}
+\markright{Protocol}
+
+\subsection*{Day 1 \textendash{} Sample preparation}
+
+\alert{In each step, samples can be rocked on a nutator or on an orbital (horizontal) shaker.}
+
+\begin{enumerate}[series = steps]
+	\item Dissect the desired adult tissue in 100\% methanol.
+	\item Wash samples for \underline{\quarter} each with a graded series of \fivehunmicrol{} (or \onemil) of \textbf{methanol (\qtylist{60;30}{\percent}) in PBSTx} at RT.
+	\item \step{wash}{\quarter}{\fivehunmicrol{} (or \onemil)}{PBSTx}{RT}
+	\item \textit{(optional)} \step{rock}{\qty{2}{\minute}}{\fivehunmicrol{} (or \onemil)}{\qty{2.6}{\ug\per\ml} proteinase K}{RT}
+	\item \textit{(optional)} \step{wash}{two times without incubation}{\fivehunmicrol{} (or \onemil)}{PBST}{RT}
+	\item \textit{(optional)} \step{post-fix}{\halfhour}{\fivehunmicrol{} (or \onemil)}{\qty{3.7}{\percent} PFA}{RT}
+	\item \textit{(optional)} \step{wash}{\qtytimes{2}{10}{\minute}}{\fivehunmicrol{} (or \onemil)}{PBSTx}{RT}
+	\item \step{incubate}{\qty{2}{\hour}}{\fivehunmicrol{} (or \onemil)}{PBSTx}{RT}
+	\item \step{incubate}{\qty{> 12}{\hour} (overnight)}{\fivehunmicrol{} (or \onemil)}{a blocking solution of \qty{6}{\percent} goat serum in PBSTx}{RT}
+\end{enumerate}
+
+\subsection*{Day 2 \textendash{} Primary antibody reaction}
+\begin{enumerate}[series = steps]
+	\item \step{incubate}{\qtyrange{24}{48}{\hour}}{\fivehunmicrol}{1:40 primary antibody in \qty{6}{\percent} goat serum solution}{\fourdegree}
+\end{enumerate}
+
+\subsection*{Day 3 \textendash{} Primary antibody reaction}
+\begin{enumerate}[series = steps]
+	\item \textit{ongoing incubation with primary antibody solution}
+\end{enumerate}
+
+\subsection*{Day 4 \textendash{} Secondary antibody reaction}
+\begin{enumerate}[series = steps]
+	\item \step{wash}{\qtytimes{6}{30}{\minute}}{\fivehunmicrol (or \onemil)}{TBSTx}{RT}
+	\item \textit{optional} \step{incubate}{\qty{1}{\hour}}{\fivehunmicrol{} (or \onemil)}{a blocking solution of \qty{6}{\percent} goat serum in PBSTx}{RT}
+	\item \step{incubate}{\qty{> 12}{\hour} (overnight)}{\fivehunmicrol}{1:20 secondary antibody in \qty{6}{\percent} goat serum}{RT}
+\end{enumerate}
+
+\subsection*{Day 5 \textendash{} IF conclusion}
+
+\begin{enumerate}[series = steps]
+	\item \step{wash}{\qtytimes{2}{5}{\minute}, \qtytimes{5}{15}{\minute}, and \qtytimes{1}{5}{\minute}}{\fivehunmicrol{} (or \onemil)}{PBSTx}{RT}
+	\item \step{incubate}{\qtyrange{30}{60}{\minute}}{\onemil}{\qty{50}{\percent} glycerol in \pbs}{RT}
+	\item \step{incubate}{\qtyrange{30}{60}{\minute}}{\onemil}{\qty{75}{\percent} glycerol in \pbs}{RT}
+	\item Collect samples from the \qty{75}{\percent} glycerol solution and place them on a cleaned (bridged, if necessary) slide.
+	\item Add \qtyrange{\sim 15}{20}{\ul} of mounting medium (or VECTASHIELD\textregistered{} PLUS Antifade Mounting Medium with DAPI [H-2000]) directly on samples.
+\end{enumerate}
+
+\bigskip\alert{Adjust the amount of mounting medium according to the cover glass dimensions, the quantity of samples, and the thickness of the bridge.}
+
+\begin{enumerate}[resume = steps]
+	\item	Seal the slide with nail polish and store in the dark at \fourdegree.
+\end{enumerate}
+
+\clearpage
+
+\section*{\textendash{} Recipes \textendash{}}
+\setstretch{0.95}
+\markright{Recipes}
+
+\subsection*{\pbs{} with \qty{0.01}{\percent} Triton X-100 (PBSTx or PTx)}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{r
+		S[table-format = 4.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
+		l
+		S[table-format = 3.2, table-align-text-post = false, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 2] % disable scientific notation
+		c
+		}
+		\textbf{Compound} & \multicolumn{2}{c}{\textbf{Quantity}} & \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Molar mass\\ (\unit{\g\per\mole})\end{tabular}}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}c@{}}Final concentration\\ (for \qty{50}{\ml})\end{tabular}}}                        \\*[0.4cm]
+		Triton X-100      & 5                                     & \unit{\ul}                                                                                             & 647                                                                                                            & \qty{0.01}{\percent} \\
+		20\per{} PBS      & 5                                     & \unit{\ml}                                                                                             & \NA                                                                                                            & 1\per{}              \\
+		Ultrapure water   & \multicolumn{2}{c}{\NA}               & \NA                                                                                                    & \NA
+	\end{tabular}
+\end{table}
+
+\begin{enumerate}
+	\item Add \qty{5}{\ml} of 20\per{} PBS to a graduated cylinder.
+	\item Add \qty{5}{\ul} of Triton X-100.
+	\item Fill up to \qty{50}{\ml} with ultrapure water.
+\end{enumerate}
+
+\subsection*{\qty{6}{\percent} goat serum in PBSTx}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{r
+		S[table-format = 4.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
+		l
+		S[table-format = 3.2, table-align-text-post = false, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 2] % disable scientific notation
+		c
+		}
+		\textbf{Compound} & \multicolumn{2}{c}{\textbf{Quantity}} & \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Molar mass\\ (\unit{\g\per\mole})\end{tabular}}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}c@{}}Final concentration\\ (for \qty{5}{\ml})\end{tabular}}}                        \\*[0.4cm]
+		Normal goat serum & 300                                   & \unit{\ul}                                                                                             & \NA                                                                                                            & \qty{6}{\percent}   \\
+		Triton X-100      & 0.5                                   & \unit{\ul}                                                                                             & 647                                                                                                            & \qty{0.01}{\percent}\\
+		20\per{} PBS      & 250                                   & \unit{\ul}                                                                                             & \NA                                                                                                            & 1\per{}             \\
+		Ultrapure water   & \multicolumn{2}{c}{\NA}               & \NA                                                                                                    & \NA
+	\end{tabular}
+\end{table}
+
+\begin{enumerate}
+	\item Add \qty{250}{\ul} of 20\per{} PBS to a beaker.
+	\item Add \qty{300}{\ul} of normal goat serum.
+	\item Add \qty{0.5}{\ul} of Triton X-100.
+	\item Fill up to \qty{5}{\ml} with ultrapure water.
+\end{enumerate}
+
+\subsection*{Proteinase K working solution}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{r
+		S[table-format = 4.2, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 2]@{\,} % disable scientific notation
+		l
+		S[table-format = 3.2, table-align-text-post = false, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 2] % disable scientific notation
+		c
+		}
+		\textbf{Compound}                                                                                              & \multicolumn{2}{c}{\textbf{Quantity}} & \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Molar mass\\ (\unit{\g\per\mole})\end{tabular}}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}c@{}}Final concentration\\ (for \qty{10}{\ml})\end{tabular}}}                         \\*[0.4cm]
+		\multicolumn{1}{c}{\begin{tabular}[c]{@{}r@{}}\qty{20}{\mg\per\ml} proteinase K\\ stock solution\end{tabular}} & 1.3                                   & \unit{\ul}                                                                                             & \NA                                                                                                            & \qty{2.6}{\ug\per\ml} \\*[0.4cm]
+		PBST                                                                                                           & \multicolumn{2}{c}{\NA}               & \NA                                                                                                    & \NA
+	\end{tabular}
+\end{table}
+
+\begin{enumerate}
+	\item Add \qty{1.3}{\ul} of \qty{20}{\mg\per\ml} proteinase K stock solution to \qty{8}{\ml} of PBST.
+	\item Fill up to \qty{10}{\ml} with PBST.
+\end{enumerate}
+
+\subsection*{1:500 DAPI staining solution}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{r
+		S[table-format = 4.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
+		l
+		S[table-format = 3.2, table-align-text-post = false, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 2] % disable scientific notation
+		c
+		}
+		\textbf{Compound} & \multicolumn{2}{c}{\textbf{Quantity}} & \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Molar mass\\ (\unit{\g\per\mole})\end{tabular}}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}c@{}}Final concentration\\ (for \qty{500}{\ul})\end{tabular}}}         \\*[0.4cm]
+		DAPI              & 1                                     & \unit{\ul}                                                                                             & \NA                                                                                                             & 1:500 \\
+		\pbs{}            & 499                                   & \unit{\ul}                                                                                             & \NA                                                                                                             & \NA
+	\end{tabular}
+\end{table}
+
+\clearpage
+
+\section*{\textendash{} Resources \textendash{}}
+\markright{Resources}
+
+\begin{enumerate}
+	\item \textbf{IHC in various ctenophore species.}
+		\begin{itemize}
+			\item Burkhardt, P., Colgren, J., Medhus, A., Digel, L., Naumann, B., Soto-Angel, J. J., ... \& Kittelmann, M. (2023). Syncytial nerve net in a ctenophore adds insights on the evolution of nervous systems. \textit{Science}, \textit{380}(6642), 293-297. \ulhref{https://doi.org/10.1126/science.ade5645}{10.1126/science.ade5645}
+			\item Jager, M., Chiori, R., Alié, A., Dayraud, C., Quéinnec, E., \& Manuel, M. (2011). New insights on ctenophore neural anatomy: immunofluorescence study in \textit{Pleurobrachia pileus} (Müller, 1776). \textit{Journal of Experimental Zoology Part B: Molecular and Developmental Evolution}, \textit{316}(3), 171-187. \ulhref{https://doi.org/10.1002/jez.b.21386}{10.1002/jez.b.21386}
+			\item Moroz, L. L., Kocot, K. M., Citarella, M. R., Dosung, S., Norekian, T. P., Povolotskaya, I. S., \ldots \& Kohn, A. B. (2014). The ctenophore genome and the evolutionary origins of neural systems. \textit{Nature}, \textit{510}(7503), 109-114. \ulhref{https://doi.org/10.1038/nature13400}{10.1038/nature13400}
+			\item Sachkova, M. Y., Nordmann, E. L., Soto-Àngel, J. J., Meeda, Y., Górski, B., Naumann, B., ... \& Burkhardt, P. (2021). Neuropeptide repertoire and 3D anatomy of the ctenophore nervous system. \textit{Current Biology}, \textit{31}(23), 5274-5285. \ulhref{https://doi.org/10.1016/j.cub.2021.09.005}{10.1016/j.cub.2021.09.005}
+		\end{itemize}
+\end{enumerate}
+
+
+\end{document}
+
+
