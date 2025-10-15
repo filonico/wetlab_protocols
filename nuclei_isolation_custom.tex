@@ -90,13 +90,13 @@
 
 \begin{enumerate}[resume = steps]
 	\item Filter the homogenate through a \qty{100}{\um} cell strainer into a \qty{15}{\ml} Falcon tube, using \qty[scientific-notation = false, group-digits = false]{1000}{\ul} low retention tips.
-	\item Rinse the cell strainer with \textbf{PBS for single cell}.
+	\item Rinse the cell strainer with \textbf{\pbs{} for single cell}.
 	\item Filter the homogenate through a \qty{40}{\um} Flowmi\textregistered{} cell strainer into a clean a \qty{15}{\ml} Falcon tube, using \qty[scientific-notation = false, group-digits = false]{1000}{\ul} low retention tips.
 	\item \label{wash1} Spin samples at \qtyrange{500}{900}{\g} for \qty{5}{\minute} at \fourdegree.
 	\item Discard the supernatant.
 	\item \label{wash3} Resuspend the nuclei with \textbf{\qty{2}{\ml} of working nuclei wash buffer}, gently pipetting with \qty[scientific-notation = false, group-digits = false]{1000}{\ul} low retention tips.
 	\item Repeat steps \ref{wash1}\textendash\ref{wash3} twice.
-	\item Resuspend samples in \textbf{\qty{500}{\ul} of PBS for single cell}.
+	\item Resuspend samples in \textbf{\qty{500}{\ul} of \pbs{} for single cell}.
 \end{enumerate}
 
 \clearpage
@@ -105,20 +105,21 @@
 \setstretch{0.95}
 \markright{Recipes}
 
-\subsection*{\pbs{} with \qty{0.01}{\percent} Triton X-100 (PBSTx or PTx)}
+\subsection*{Stock lysis buffer}
 
 \begin{table}[H]
 	\centering
 	\begin{tabular}{r
 		S[table-format = 4.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
 		l
-		S[table-format = 3.2, table-align-text-post = false, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 2] % disable scientific notation
 		c
+		S[table-format = 3.0, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 0]@{\,} % disable scientific notation
+		l
 		}
-		\textbf{Compound} & \multicolumn{2}{c}{\textbf{Quantity}} & \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Molar mass\\ (\unit{\g\per\mole})\end{tabular}}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}c@{}}Final concentration\\ (for \qty{50}{\ml})\end{tabular}}}                        \\*[0.4cm]
-		Triton X-100      & 5                                     & \unit{\ul}                                                                                             & 647                                                                                                            & \qty{0.01}{\percent} \\
-		20\per{} PBS      & 5                                     & \unit{\ml}                                                                                             & \NA                                                                                                            & 1\per{}              \\
-		Ultrapure water   & \multicolumn{2}{c}{\NA}               & \NA                                                                                                    & \NA
+		\textbf{Compound}				& \multicolumn{2}{c}{\textbf{Quantity}}	& \textbf{\begin{tabular}[c]{@{}c@{}}Initial\\concentration\end{tabular}}	& \multicolumn{2}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Final concentration\\ (for \qty{10}{\ml})\end{tabular}}}	\\*[0.4cm]
+		Tris-\ce{HCl} (pH \num{7.5})	& 100			& \unit{\ul}			& \qty{1}{\molar}															& 100		& \unit{\milli\molar}																					\\
+		\ce{NaCl}						& 20			& \unit{\ul}			& \qty{5}{\molar}															& 10		& \unit{\milli\molar}																					\\
+		\ce{MgCl2}						& 30			& \unit{\ul}			& \qty{1}{\molar}															& 3			& \unit{\milli\molar}																					\\
 	\end{tabular}
 \end{table}
 
