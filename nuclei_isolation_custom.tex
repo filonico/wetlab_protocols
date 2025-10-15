@@ -1,0 +1,211 @@
+\documentclass[10pt]{report}
+\usepackage[utf8]{inputenc}
+
+\input{general_preamble}
+
+% DEFINE TITLE STYLES
+\makeatletter 
+\renewcommand\maketitle{
+{\begin{center}
+{\Large \bfseries \@title }\\
+{\small \emph{First created}: \DTMdisplaydate{2025}{10}{14}{-1}\hfill%
+\setstretch{1.0} \small \hfill \emph{Last update}: \today}
+%{\Large  \@author}\\[4ex] 
+\end{center}}} % Note the extra }
+\makeatother
+
+%-------------------------------------------------------------------------
+
+\begin{document}
+
+%\sisetup{parse-numbers = false}
+\DTMsetdatestyle{cvdateformat}
+
+\title{\vspace{-3em} Nuclei isolation from flash-frozen \emph{Pleurobrachia} samples}
+\maketitle
+\thispagestyle{plain}
+\markboth{Nuclei isolation from frozen \emph{Pleurobrachia}}{}
+
+
+\section*{\vspace{-1em} \textendash{} Protocol \textendash{}}
+\markright{Protocol}
+
+\subsection*{Materials}
+\begin{multicols}{2}
+\begin{todolist}
+	\item BSA \qty{1}{\percent}
+	\item Buffer, lysis (stock)
+	\item Buffer, wash (stock)
+	\item Cell strainer \qty{100}{\um}
+	\item Cell strainer Flowmi\textregistered{} \qty{40}{\um}
+	\item Dissecting needles
+	\item Dounce homogenizers \& pestels
+	\item DTT
+	\item Eppendorfs \qty{0.5}{\ml}
+	\item Eppendorfs \qty{2}{\ml}
+	\item Eppendorfs \qty{2}{\ml} low bind
+	\item Eppendorfs \qty{5}{\ml}
+	\item Falcon tubes \qty{15}{\ml}
+	\item Gloves
+	\item Ice boxes
+	\item Nuclease-free water
+	\item PBS for single cell
+	\item Petri dish
+	\item Pipettes
+	\item RNase inhibitor
+	\item RNaseZap\texttrademark{}
+	\item Samples
+	\item Scaple blades (new)
+	\item Tips \qty[scientific-notation = false, group-digits = false]{1000}{\ul}
+	\item Tips \qty[scientific-notation = false, group-digits = false]{1000}{\ul} low retention
+	\item Tips \qty{200}{\ul} 
+	\item Tips \qty{200}{\ul} low retention
+	\item Tips \qty{20}{\ul}
+	\item Tips \qty{10}{\ul}
+	\item Tweezers
+\end{todolist}
+\end{multicols}
+
+\subsection*{Procedure}
+
+\alert{Make sure to set the temperature of the \qty{4}{\degreeCelsius} centrifuge beforehand.}
+\alert{Always \textbf{work on ice}, unless otherwise specified.}
+\alert{Always keep the working environment and materials as much \textbf{RNase-free} as possible.}
+\alert{Place all the working solutions, tubes, and homogenizers on ice before starting.}
+\alert{Keep the frozen samples at \qty{-80}{\degreeCelsius} until use. Otherwise, place them in dry ice.}
+
+\begin{enumerate}[series = steps]
+	\item Add \textbf{\qtyrange{2}{5}{\ml} of ice-cold working lysis buffer} into a Dounce homogenizer.
+	\item Transfer the  samples from the tube to the homogenizers using tweezers.
+\end{enumerate}
+
+\bigskip\alert{If the starting material is too much, place it on a dry-ice-cooled petri dish, and split it in multiple samples using a sterile scaple blade.}
+
+\begin{enumerate}[resume = steps]
+	\item Homogenize samples on ice, with a maximum of 10 loose-pestel strokes, and a maximum of 10 tight-pestle strokes.
+	\item Rinse the pestles back into the homogenizers with \textbf{\qtyrange{100}{500}{\ul} of lysis buffer}.
+\end{enumerate}
+
+\bigskip\alert{If the sample does not fully dissociat, incubate on ice with the lysis buffer for a couple of minutes.}
+
+\begin{enumerate}[resume = steps]
+	\item Filter the homogenate through a \qty{100}{\um} cell strainer into a \qty{15}{\ml} Falcon tube, using \qty[scientific-notation = false, group-digits = false]{1000}{\ul} low retention tips.
+	\item Rinse the cell strainer with \textbf{PBS for single cell}.
+	\item Filter the homogenate through a \qty{40}{\um} Flowmi\textregistered{} cell strainer into a clean a \qty{15}{\ml} Falcon tube, using \qty[scientific-notation = false, group-digits = false]{1000}{\ul} low retention tips.
+	\item \label{wash1} Spin samples at \qtyrange{500}{900}{\g} for \qty{5}{\minute} at \fourdegree.
+	\item Discard the supernatant.
+	\item \label{wash3} Resuspend the nuclei with \textbf{\qty{2}{\ml} of working nuclei wash buffer}, gently pipetting with \qty[scientific-notation = false, group-digits = false]{1000}{\ul} low retention tips.
+	\item Repeat steps \ref{wash1}\textendash\ref{wash3} twice.
+	\item Resuspend samples in \textbf{\qty{500}{\ul} of PBS for single cell}.
+\end{enumerate}
+
+\clearpage
+
+\section*{\textendash{} Recipes \textendash{}}
+\setstretch{0.95}
+\markright{Recipes}
+
+\subsection*{\pbs{} with \qty{0.01}{\percent} Triton X-100 (PBSTx or PTx)}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{r
+		S[table-format = 4.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
+		l
+		S[table-format = 3.2, table-align-text-post = false, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 2] % disable scientific notation
+		c
+		}
+		\textbf{Compound} & \multicolumn{2}{c}{\textbf{Quantity}} & \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Molar mass\\ (\unit{\g\per\mole})\end{tabular}}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}c@{}}Final concentration\\ (for \qty{50}{\ml})\end{tabular}}}                        \\*[0.4cm]
+		Triton X-100      & 5                                     & \unit{\ul}                                                                                             & 647                                                                                                            & \qty{0.01}{\percent} \\
+		20\per{} PBS      & 5                                     & \unit{\ml}                                                                                             & \NA                                                                                                            & 1\per{}              \\
+		Ultrapure water   & \multicolumn{2}{c}{\NA}               & \NA                                                                                                    & \NA
+	\end{tabular}
+\end{table}
+
+\begin{enumerate}
+	\item Add \qty{5}{\ml} of 20\per{} PBS to a graduated cylinder.
+	\item Add \qty{5}{\ul} of Triton X-100.
+	\item Fill up to \qty{50}{\ml} with ultrapure water.
+\end{enumerate}
+
+\subsection*{\qty{6}{\percent} goat serum in PBSTx}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{r
+		S[table-format = 4.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
+		l
+		S[table-format = 3.2, table-align-text-post = false, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 2] % disable scientific notation
+		c
+		}
+		\textbf{Compound} & \multicolumn{2}{c}{\textbf{Quantity}} & \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Molar mass\\ (\unit{\g\per\mole})\end{tabular}}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}c@{}}Final concentration\\ (for \qty{5}{\ml})\end{tabular}}}                        \\*[0.4cm]
+		Normal goat serum & 300                                   & \unit{\ul}                                                                                             & \NA                                                                                                            & \qty{6}{\percent}   \\
+		Triton X-100      & 0.5                                   & \unit{\ul}                                                                                             & 647                                                                                                            & \qty{0.01}{\percent}\\
+		20\per{} PBS      & 250                                   & \unit{\ul}                                                                                             & \NA                                                                                                            & 1\per{}             \\
+		Ultrapure water   & \multicolumn{2}{c}{\NA}               & \NA                                                                                                    & \NA
+	\end{tabular}
+\end{table}
+
+\begin{enumerate}
+	\item Add \qty{250}{\ul} of 20\per{} PBS to a beaker.
+	\item Add \qty{300}{\ul} of normal goat serum.
+	\item Add \qty{0.5}{\ul} of Triton X-100.
+	\item Fill up to \qty{5}{\ml} with ultrapure water.
+\end{enumerate}
+
+\subsection*{Proteinase K working solution}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{r
+		S[table-format = 4.2, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 2]@{\,} % disable scientific notation
+		l
+		S[table-format = 3.2, table-align-text-post = false, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 2] % disable scientific notation
+		c
+		}
+		\textbf{Compound}                                                                                              & \multicolumn{2}{c}{\textbf{Quantity}} & \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Molar mass\\ (\unit{\g\per\mole})\end{tabular}}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}c@{}}Final concentration\\ (for \qty{10}{\ml})\end{tabular}}}                         \\*[0.4cm]
+		\multicolumn{1}{c}{\begin{tabular}[c]{@{}r@{}}\qty{20}{\mg\per\ml} proteinase K\\ stock solution\end{tabular}} & 1.3                                   & \unit{\ul}                                                                                             & \NA                                                                                                            & \qty{2.6}{\ug\per\ml} \\*[0.4cm]
+		PBST                                                                                                           & \multicolumn{2}{c}{\NA}               & \NA                                                                                                    & \NA
+	\end{tabular}
+\end{table}
+
+\begin{enumerate}
+	\item Add \qty{1.3}{\ul} of \qty{20}{\mg\per\ml} proteinase K stock solution to \qty{8}{\ml} of PBST.
+	\item Fill up to \qty{10}{\ml} with PBST.
+\end{enumerate}
+
+\subsection*{1:500 DAPI staining solution}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{r
+		S[table-format = 4.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
+		l
+		S[table-format = 3.2, table-align-text-post = false, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 2] % disable scientific notation
+		c
+		}
+		\textbf{Compound} & \multicolumn{2}{c}{\textbf{Quantity}} & \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Molar mass\\ (\unit{\g\per\mole})\end{tabular}}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}c@{}}Final concentration\\ (for \qty{500}{\ul})\end{tabular}}}         \\*[0.4cm]
+		DAPI              & 1                                     & \unit{\ul}                                                                                             & \NA                                                                                                             & 1:500 \\
+		\pbs{}            & 499                                   & \unit{\ul}                                                                                             & \NA                                                                                                             & \NA
+	\end{tabular}
+\end{table}
+
+\clearpage
+
+\section*{\textendash{} Resources \textendash{}}
+\markright{Resources}
+
+\begin{enumerate}
+	\item \textbf{IHC in various ctenophore species.}
+		\begin{itemize}
+			\item Burkhardt, P., Colgren, J., Medhus, A., Digel, L., Naumann, B., Soto-Angel, J. J., ... \& Kittelmann, M. (2023). Syncytial nerve net in a ctenophore adds insights on the evolution of nervous systems. \textit{Science}, \textit{380}(6642), 293-297. \ulhref{https://doi.org/10.1126/science.ade5645}{10.1126/science.ade5645}
+			\item Jager, M., Chiori, R., Alié, A., Dayraud, C., Quéinnec, E., \& Manuel, M. (2011). New insights on ctenophore neural anatomy: immunofluorescence study in \textit{Pleurobrachia pileus} (Müller, 1776). \textit{Journal of Experimental Zoology Part B: Molecular and Developmental Evolution}, \textit{316}(3), 171-187. \ulhref{https://doi.org/10.1002/jez.b.21386}{10.1002/jez.b.21386}
+			\item Moroz, L. L., Kocot, K. M., Citarella, M. R., Dosung, S., Norekian, T. P., Povolotskaya, I. S., \ldots \& Kohn, A. B. (2014). The ctenophore genome and the evolutionary origins of neural systems. \textit{Nature}, \textit{510}(7503), 109-114. \ulhref{https://doi.org/10.1038/nature13400}{10.1038/nature13400}
+			\item Sachkova, M. Y., Nordmann, E. L., Soto-Àngel, J. J., Meeda, Y., Górski, B., Naumann, B., ... \& Burkhardt, P. (2021). Neuropeptide repertoire and 3D anatomy of the ctenophore nervous system. \textit{Current Biology}, \textit{31}(23), 5274-5285. \ulhref{https://doi.org/10.1016/j.cub.2021.09.005}{10.1016/j.cub.2021.09.005}
+		\end{itemize}
+\end{enumerate}
+
+
+\end{document}
+
+
