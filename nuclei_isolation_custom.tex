@@ -96,7 +96,7 @@
 	\item Discard the supernatant.
 	\item \label{wash3} Resuspend the nuclei with \textbf{\qty{2}{\ml} of working nuclei wash buffer}, gently pipetting with \qty[scientific-notation = false, group-digits = false]{1000}{\ul} low retention tips.
 	\item Repeat steps \ref{wash1}\textendash\ref{wash3} twice.
-	\item Resuspend samples in \textbf{\qty{500}{\ul} of \pbs{} for single cell}.
+	\item Resuspend samples in \textbf{\qty{500}{\ul} of \pbs{} for the single-nuclei workflow}.
 \end{enumerate}
 
 \clearpage
@@ -112,100 +112,107 @@
 	\begin{tabular}{r
 		S[table-format = 4.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
 		l
-		c
-		S[table-format = 3.0, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 0]@{\,} % disable scientific notation
+		S[table-format = 3.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
+		l
+		S[table-format = 3.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
 		l
 		}
-		\textbf{Compound}				& \multicolumn{2}{c}{\textbf{Quantity}}	& \textbf{\begin{tabular}[c]{@{}c@{}}Initial\\concentration\end{tabular}}	& \multicolumn{2}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Final concentration\\ (for \qty{10}{\ml})\end{tabular}}}	\\*[0.4cm]
-		Tris-\ce{HCl} (pH \num{7.5})	& 100			& \unit{\ul}			& \qty{1}{\molar}															& 100		& \unit{\milli\molar}																					\\
-		\ce{NaCl}						& 20			& \unit{\ul}			& \qty{5}{\molar}															& 10		& \unit{\milli\molar}																					\\
-		\ce{MgCl2}						& 30			& \unit{\ul}			& \qty{1}{\molar}															& 3			& \unit{\milli\molar}																					\\
+		\textbf{Compound}				& \multicolumn{2}{c}{\textbf{Quantity}}	& \multicolumn{2}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Initial\\concentration\end{tabular}}}	& \multicolumn{2}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Final concentration\\ (for \qty{10}{\ml})\end{tabular}}}	\\*[0.4cm]
+		Tris-\ce{HCl} (pH \num{7.5})	& 100			& \unit{\ul}			& 1		& \unit{\molar}																			& 10		& \unit{\milli\molar}																					\\
+		\ce{NaCl}						& 20			& \unit{\ul}			& 5		& \unit{\molar}																			& 10		& \unit{\milli\molar}																					\\
+		\ce{MgCl2}						& 30			& \unit{\ul}			& 1		& \unit{\molar}																			& 3			& \unit{\milli\molar}																					\\
+		BSA								& 1.333			& \unit{\ml}			& 7.5	& \unit{\percent}																		& 1			& \unit{\percent}																						\\
+		IGEPAL\textregistered{} CA-630	& 100			& \unit{\ul}			& 10	& \unit{\percent}																		& 0.1		& \unit{\percent}																						\\
+		Nuclease-free water				& 8416			& \unit{\ml}			& \NA	&																						& \NA		&																										\\
 	\end{tabular}
 \end{table}
 
 \begin{enumerate}
-	\item Add \qty{5}{\ml} of 20\per{} PBS to a graduated cylinder.
-	\item Add \qty{5}{\ul} of Triton X-100.
-	\item Fill up to \qty{50}{\ml} with ultrapure water.
+	\item Add Tris-\ce{HCl} (pH \num{7.5}), \ce{NaCl}, and \ce{MgCl2} to combin;
+	\item add IGEPAL\textregistered{} CA-630 and BSA, mixing gently to avoid foaming;
+	\item add nuclease-free water to reach a final volume of \qty{10}{\ml};
+	\item filter sterilise with a \qty{0.2}{\um} filter;
+	\item store at \qty{4}{\degreeCelsius} for 3--4 weeks, or at \qty{-20}{\degreeCelsius} for up to 6 months.
 \end{enumerate}
 
-\subsection*{\qty{6}{\percent} goat serum in PBSTx}
+\bigskip\alert{Avoid repeated freeze-thaw cycles. Thaw on ice. Mix gently to avoid foaming.}
+
+\subsection*{Working lysis buffer}
 
 \begin{table}[H]
 	\centering
 	\begin{tabular}{r
 		S[table-format = 4.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
 		l
-		S[table-format = 3.2, table-align-text-post = false, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 2] % disable scientific notation
-		c
-		}
-		\textbf{Compound} & \multicolumn{2}{c}{\textbf{Quantity}} & \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Molar mass\\ (\unit{\g\per\mole})\end{tabular}}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}c@{}}Final concentration\\ (for \qty{5}{\ml})\end{tabular}}}                        \\*[0.4cm]
-		Normal goat serum & 300                                   & \unit{\ul}                                                                                             & \NA                                                                                                            & \qty{6}{\percent}   \\
-		Triton X-100      & 0.5                                   & \unit{\ul}                                                                                             & 647                                                                                                            & \qty{0.01}{\percent}\\
-		20\per{} PBS      & 250                                   & \unit{\ul}                                                                                             & \NA                                                                                                            & 1\per{}             \\
-		Ultrapure water   & \multicolumn{2}{c}{\NA}               & \NA                                                                                                    & \NA
-	\end{tabular}
-\end{table}
-
-\begin{enumerate}
-	\item Add \qty{250}{\ul} of 20\per{} PBS to a beaker.
-	\item Add \qty{300}{\ul} of normal goat serum.
-	\item Add \qty{0.5}{\ul} of Triton X-100.
-	\item Fill up to \qty{5}{\ml} with ultrapure water.
-\end{enumerate}
-
-\subsection*{Proteinase K working solution}
-
-\begin{table}[H]
-	\centering
-	\begin{tabular}{r
-		S[table-format = 4.2, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 2]@{\,} % disable scientific notation
+		S[table-format = 3.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
 		l
-		S[table-format = 3.2, table-align-text-post = false, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 2] % disable scientific notation
-		c
+		S[table-format = 3.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
+		l
 		}
-		\textbf{Compound}                                                                                              & \multicolumn{2}{c}{\textbf{Quantity}} & \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Molar mass\\ (\unit{\g\per\mole})\end{tabular}}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}c@{}}Final concentration\\ (for \qty{10}{\ml})\end{tabular}}}                         \\*[0.4cm]
-		\multicolumn{1}{c}{\begin{tabular}[c]{@{}r@{}}\qty{20}{\mg\per\ml} proteinase K\\ stock solution\end{tabular}} & 1.3                                   & \unit{\ul}                                                                                             & \NA                                                                                                            & \qty{2.6}{\ug\per\ml} \\*[0.4cm]
-		PBST                                                                                                           & \multicolumn{2}{c}{\NA}               & \NA                                                                                                    & \NA
-	\end{tabular}
+		\textbf{Compound}				& \multicolumn{2}{c}{\textbf{Quantity}}	& \multicolumn{2}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Initial\\concentration\end{tabular}}}	& \multicolumn{2}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Final concentration\\ (for \qty[scientific-notation = false, group-digits = false]{1000}{\ul})\end{tabular}}}	\\*[0.4cm]
+		Dithiothreitol (DTT)			& 10	& \unit{\ul}					& 0.1	& \unit{\molar}																			& 0.001	& \unit{\molar}																																					\\
+		RNAse inhibitor					& 5		& \unit{\ul}					& 40	& \unit{\activeunit\per\ul}																& 0.2	& \unit{\activeunit\per\ul}																																		\\ 
+		Stock lysis buffer				& 985	& \unit{\ul}					& \NA	&																						& \NA	& 																																								\\
+		\end{tabular}
 \end{table}
 
 \begin{enumerate}
-	\item Add \qty{1.3}{\ul} of \qty{20}{\mg\per\ml} proteinase K stock solution to \qty{8}{\ml} of PBST.
-	\item Fill up to \qty{10}{\ml} with PBST.
+	\item Add DTT and RNAse inhibitor to the stock lysis buffer.
 \end{enumerate}
 
-\subsection*{1:500 DAPI staining solution}
+\subsection*{Stock wash buffer}
 
 \begin{table}[H]
 	\centering
 	\begin{tabular}{r
 		S[table-format = 4.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
 		l
-		S[table-format = 3.2, table-align-text-post = false, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 2] % disable scientific notation
-		c
+		S[table-format = 3.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
+		l
+		S[table-format = 3.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
+		l
 		}
-		\textbf{Compound} & \multicolumn{2}{c}{\textbf{Quantity}} & \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Molar mass\\ (\unit{\g\per\mole})\end{tabular}}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}c@{}}Final concentration\\ (for \qty{500}{\ul})\end{tabular}}}         \\*[0.4cm]
-		DAPI              & 1                                     & \unit{\ul}                                                                                             & \NA                                                                                                             & 1:500 \\
-		\pbs{}            & 499                                   & \unit{\ul}                                                                                             & \NA                                                                                                             & \NA
+		\textbf{Compound}				& \multicolumn{2}{c}{\textbf{Quantity}}	& \multicolumn{2}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Initial\\concentration\end{tabular}}}	& \multicolumn{2}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Final concentration\\ (for \qty{25}{\ml})\end{tabular}}}	\\*[0.4cm]
+		Tris-\ce{HCl} (pH \num{7.5})	& 250			& \unit{\ul}			& 1		& \unit{\molar}																			& 10		& \unit{\milli\molar}																					\\
+		\ce{NaCl}						& 50			& \unit{\ul}			& 5		& \unit{\molar}																			& 10		& \unit{\milli\molar}																					\\
+		\ce{MgCl2}						& 75			& \unit{\ul}			& 1		& \unit{\molar}																			& 3			& \unit{\milli\molar}																					\\
+		BSA								& 3.333			& \unit{\ml}			& 7.5	& \unit{\percent}																		& 1			& \unit{\percent}																						\\
+		Nuclease-free water				& 21.292		& \unit{\ml}			& \NA	&																						& \NA		&																										\\
 	\end{tabular}
 \end{table}
 
-\clearpage
-
-\section*{\textendash{} Resources \textendash{}}
-\markright{Resources}
-
 \begin{enumerate}
-	\item \textbf{IHC in various ctenophore species.}
-		\begin{itemize}
-			\item Burkhardt, P., Colgren, J., Medhus, A., Digel, L., Naumann, B., Soto-Angel, J. J., ... \& Kittelmann, M. (2023). Syncytial nerve net in a ctenophore adds insights on the evolution of nervous systems. \textit{Science}, \textit{380}(6642), 293-297. \ulhref{https://doi.org/10.1126/science.ade5645}{10.1126/science.ade5645}
-			\item Jager, M., Chiori, R., Alié, A., Dayraud, C., Quéinnec, E., \& Manuel, M. (2011). New insights on ctenophore neural anatomy: immunofluorescence study in \textit{Pleurobrachia pileus} (Müller, 1776). \textit{Journal of Experimental Zoology Part B: Molecular and Developmental Evolution}, \textit{316}(3), 171-187. \ulhref{https://doi.org/10.1002/jez.b.21386}{10.1002/jez.b.21386}
-			\item Moroz, L. L., Kocot, K. M., Citarella, M. R., Dosung, S., Norekian, T. P., Povolotskaya, I. S., \ldots \& Kohn, A. B. (2014). The ctenophore genome and the evolutionary origins of neural systems. \textit{Nature}, \textit{510}(7503), 109-114. \ulhref{https://doi.org/10.1038/nature13400}{10.1038/nature13400}
-			\item Sachkova, M. Y., Nordmann, E. L., Soto-Àngel, J. J., Meeda, Y., Górski, B., Naumann, B., ... \& Burkhardt, P. (2021). Neuropeptide repertoire and 3D anatomy of the ctenophore nervous system. \textit{Current Biology}, \textit{31}(23), 5274-5285. \ulhref{https://doi.org/10.1016/j.cub.2021.09.005}{10.1016/j.cub.2021.09.005}
-		\end{itemize}
+	\item Add Tris-\ce{HCl} (pH \num{7.5}), \ce{NaCl}, and \ce{MgCl2} to combin;
+	\item add BSA, mixing gently;
+	\item add nuclease-free water to reach a final volume of \qty{25}{\ml};
+	\item filter sterilise with a \qty{0.2}{\um} filter;
+	\item store at \qty{4}{\degreeCelsius} for 3--4 weeks, or at \qty{-20}{\degreeCelsius} for up to 6 months.
 \end{enumerate}
 
+\bigskip\alert{Avoid repeated freeze-thaw cycles. Thaw on ice. Mix gently to avoid foaming.}
+
+\subsection*{Working wash buffer}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{r
+		S[table-format = 4.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
+		l
+		S[table-format = 3.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
+		l
+		S[table-format = 3.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
+		l
+		}
+		\textbf{Compound}				& \multicolumn{2}{c}{\textbf{Quantity}}	& \multicolumn{2}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Initial\\concentration\end{tabular}}}	& \multicolumn{2}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Final concentration\\ (for \qty[scientific-notation = false, group-digits = false]{1000}{\ul})\end{tabular}}}	\\*[0.4cm]
+		Dithiothreitol (DTT)			& 10	& \unit{\ul}					& 0.1	& \unit{\molar}																			& 0.001	& \unit{\molar}																																					\\
+		RNAse inhibitor					& 5		& \unit{\ul}					& 40	& \unit{\activeunit\per\ul}																& 0.2	& \unit{\activeunit\per\ul}																																		\\ 
+		Stock wash buffer				& 985	& \unit{\ul}					& \NA	&																						& \NA	& 																																								\\
+		\end{tabular}
+\end{table}
+
+\begin{enumerate}
+	\item Add DTT and RNAse inhibitor to the stock wash buffer.
+\end{enumerate}
 
 \end{document}
 
