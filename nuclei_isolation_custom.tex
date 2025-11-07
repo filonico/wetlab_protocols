@@ -32,7 +32,7 @@
 \subsection*{Materials}
 \begin{multicols}{2}
 \begin{todolist}
-	\item BSA \qty{1}{\percent}
+	\item BSA \qty{7.5}{\percent}
 	\item Buffer, lysis (stock)
 	\item Buffer, wash (stock)
 	\item Cell strainer \qty{100}{\um}
@@ -48,19 +48,20 @@
 	\item Gloves
 	\item Ice boxes
 	\item Nuclease-free water
-	\item PBS for single cell
 	\item Petri dish
 	\item Pipettes
 	\item RNase inhibitor
 	\item RNaseZap\texttrademark{}
+	\item IMS
 	\item Samples
-	\item Scaple blades (new)
+	\item Surgical scalpel blades (sterile)
 	\item Tips \qty[scientific-notation = false, group-digits = false]{1000}{\ul}
 	\item Tips \qty[scientific-notation = false, group-digits = false]{1000}{\ul} low retention
 	\item Tips \qty{200}{\ul} 
 	\item Tips \qty{200}{\ul} low retention
 	\item Tips \qty{20}{\ul}
 	\item Tips \qty{10}{\ul}
+	\item Trypan Blue, \qty{0.4}{\percent} solution
 	\item Tweezers
 \end{todolist}
 \end{multicols}
@@ -76,28 +77,28 @@
 \alert{Keep the frozen samples at \qty{-80}{\degreeCelsius} until use. Otherwise, place them in dry ice.}
 
 \begin{enumerate}[series = steps]
-	\item Add \textbf{\qtyrange{2}{5}{\ml} of ice-cold working lysis buffer} into a Dounce homogenizer.
-	\item Transfer the  samples from the tube to the homogenizers using tweezers.
+	\item Add \textbf{\qtyrange{2}{5}{\ml} of ice-cold working lysis buffer} into a Dounce homogenizer; keep in ice.
+	\item Place the sample onto the lid of a \qty{5}{\ml} eppendorf tube filled with \qtyrange[scientific-notation = false, group-digits = false]{500}{1000}{\ul} of pre-chilled lysis buffer.
+	\item Using a surgical sterile scalpel blade, \textbf{cut the sample into small chunks}.
+	\item Transfer the  samples from the tube to the homogenizers using tweezers and/or a pipette, depending on chunk sizes.
+	\item \textbf{Homogenize samples on ice}, with a maximum of 10 loose-pestel strokes, and a maximum of 10 tight-pestle strokes.
+	\item Let big pieces of tissues to settle at the bottom of the homogenizer.
+	\item Repeat homogenization if the tissue does not look dissociated.
 \end{enumerate}
 
-\bigskip\alert{If the starting material is too much, place it on a dry-ice-cooled petri dish, and split it in multiple samples using a sterile scaple blade.}
-
+\bigskip\alert{Always rinse the pestles back into the homogenizers with \textbf{\qtyrange{100}{500}{\ul} of lysis buffer}.}
+	
 \begin{enumerate}[resume = steps]
-	\item Homogenize samples on ice, with a maximum of 10 loose-pestel strokes, and a maximum of 10 tight-pestle strokes.
-	\item Rinse the pestles back into the homogenizers with \textbf{\qtyrange{100}{500}{\ul} of lysis buffer}.
-\end{enumerate}
-
-\bigskip\alert{If the sample does not fully dissociat, incubate on ice with the lysis buffer for a couple of minutes.}
-
-\begin{enumerate}[resume = steps]
-	\item Filter the homogenate through a \qty{100}{\um} cell strainer into a \qty{15}{\ml} Falcon tube, using \qty[scientific-notation = false, group-digits = false]{1000}{\ul} low retention tips.
-	\item Rinse the cell strainer with \textbf{\pbs{} for single cell}.
-	\item Filter the homogenate through a \qty{40}{\um} Flowmi\textregistered{} cell strainer into a clean a \qty{15}{\ml} Falcon tube, using \qty[scientific-notation = false, group-digits = false]{1000}{\ul} low retention tips.
-	\item \label{wash1} Spin samples at \qtyrange{500}{900}{\g} for \qty{5}{\minute} at \fourdegree.
-	\item Discard the supernatant.
-	\item \label{wash3} Resuspend the nuclei with \textbf{\qty{2}{\ml} of working nuclei wash buffer}, gently pipetting with \qty[scientific-notation = false, group-digits = false]{1000}{\ul} low retention tips.
-	\item Repeat steps \ref{wash1}\textendash\ref{wash3} twice.
-	\item Resuspend samples in \textbf{\qty{500}{\ul} of \pbs{} for the single-nuclei workflow}.
+	\item \textbf{Filter the homogenate} through a \qtyrange{30}{40}{\um} cell strainer into a \qty{5}{\ml} eppendorf tube, using \qty[scientific-notation = false, group-digits = false]{1000}{\ul} low retention tips.
+	\item Rinse the cell strainer with nuclei lysis buffer.
+	\item \textbf{Spin samples} at \qty{500}{\g} for \qty{10}{\minute} at \fourdegree.
+	\item Discard the supernatant and leave \qty{~50}{\ul} of buffer.
+	\item Add \textbf{\qty{600}{\ul} of nuclei wash buffer} drop-wise without disturbing the pellet.
+	\item \textbf{Resuspend the nuclei} by gently pipetting with a \qty[scientific-notation = false, group-digits = false]{200}{\ul} low retention tip, making sure they stay close to the bottom of the tube.
+	\item \textbf{Spin samples} at \qty{500}{\g} for \qty{10}{\minute} at \fourdegree.
+	\item Discard the supernatant and leave \qty{~25}{\ul} of buffer.
+	\item Add \textbf{\qty{50}{\ul} of wash buffer} and resuspend the pellet by gently pipetting.
+	\item Possibly filter the nuclei suspension through a \qty{10}{\um} cell strainer to avoid aggregates.
 \end{enumerate}
 
 \clearpage
@@ -106,7 +107,7 @@
 \setstretch{0.95}
 \markright{Recipes}
 
-\subsection*{Stock lysis buffer}
+\subsection*{Working lysis buffer}
 
 \begin{table}[H]
 	\centering
@@ -124,21 +125,25 @@
 		\ce{MgCl2}						& 30			& \unit{\ul}			& 1		& \unit{\molar}																			& 3			& \unit{\milli\molar}																					\\
 		BSA								& 1.333			& \unit{\ml}			& 7.5	& \unit{\percent}																		& 1			& \unit{\percent}																						\\
 		IGEPAL\textregistered{} CA-630	& 100			& \unit{\ul}			& 10	& \unit{\percent}																		& 0.1		& \unit{\percent}																						\\
-		Nuclease-free water				& 8416			& \unit{\ml}			& \NA	&																						& \NA		&																										\\
+		Dithiothreitol (DTT)			& 10			& \unit{\ul}			& 1		& \unit{\molar}																			& 1			& \unit{\milli\molar}																					\\
+		RNAse inhibitor					& 50			& \unit{\ul}			& 40	& \unit{\activeunit\per\ul}																& 0.2		& \unit{\activeunit\per\ul}																				\\
+		Protease inhibitor (\#15614189)	& 1				& tablet				& \NA	& 																						& \NA		&																										\\
+		Nuclease-free water				& 8380			& \unit{\ml}			& \NA	&																						& \NA		&																										\\
 	\end{tabular}
 \end{table}
 
 \begin{enumerate}
 	\item Add Tris-\ce{HCl} (pH \num{7.5}), \ce{NaCl}, and \ce{MgCl2} to combin;
 	\item add IGEPAL\textregistered{} CA-630 and BSA, mixing gently to avoid foaming;
-	\item add nuclease-free water to reach a final volume of \qty{10}{\ml};
+	\item add RNAse inhibitor;
+	\item add \qty{4}{\ml} of nuclease-free water;
+	\item add the protease inhibitor tablet and let dissolve, also by gently pipetting;
+	\item add the remaining amount of nuclease-free water;
 	\item filter sterilise with a \qty{0.2}{\um} filter;
-	\item store at \qty{4}{\degreeCelsius} for 3--4 weeks, or at \qty{-20}{\degreeCelsius} for up to 6 months.
+	\item use same day.
 \end{enumerate}
 
-\bigskip\alert{Avoid repeated freeze-thaw cycles. Thaw on ice. Mix gently to avoid foaming.}
-
-\subsection*{Working lysis buffer}
+\subsection*{Working nuclei wash buffer}
 
 \begin{table}[H]
 	\centering
@@ -150,71 +155,23 @@
 		S[table-format = 3.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
 		l
 		}
-		\textbf{Compound}				& \multicolumn{2}{c}{\textbf{Quantity}}	& \multicolumn{2}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Initial\\concentration\end{tabular}}}	& \multicolumn{2}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Final concentration\\ (for \qty[scientific-notation = false, group-digits = false]{1000}{\ul})\end{tabular}}}	\\*[0.4cm]
-		Dithiothreitol (DTT)			& 10	& \unit{\ul}					& 0.1	& \unit{\molar}																			& 0.001	& \unit{\molar}																																					\\
-		RNAse inhibitor					& 5		& \unit{\ul}					& 40	& \unit{\activeunit\per\ul}																& 0.2	& \unit{\activeunit\per\ul}																																		\\ 
-		Stock lysis buffer				& 985	& \unit{\ul}					& \NA	&																						& \NA	& 																																								\\
-		\end{tabular}
-\end{table}
-
-\begin{enumerate}
-	\item Add DTT and RNAse inhibitor to the stock lysis buffer.
-\end{enumerate}
-
-\subsection*{Stock wash buffer}
-
-\begin{table}[H]
-	\centering
-	\begin{tabular}{r
-		S[table-format = 4.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
-		l
-		S[table-format = 3.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
-		l
-		S[table-format = 3.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
-		l
-		}
-		\textbf{Compound}				& \multicolumn{2}{c}{\textbf{Quantity}}	& \multicolumn{2}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Initial\\concentration\end{tabular}}}	& \multicolumn{2}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Final concentration\\ (for \qty{25}{\ml})\end{tabular}}}	\\*[0.4cm]
-		Tris-\ce{HCl} (pH \num{7.5})	& 250			& \unit{\ul}			& 1		& \unit{\molar}																			& 10		& \unit{\milli\molar}																					\\
-		\ce{NaCl}						& 50			& \unit{\ul}			& 5		& \unit{\molar}																			& 10		& \unit{\milli\molar}																					\\
-		\ce{MgCl2}						& 75			& \unit{\ul}			& 1		& \unit{\molar}																			& 3			& \unit{\milli\molar}																					\\
-		BSA								& 3.333			& \unit{\ml}			& 7.5	& \unit{\percent}																		& 1			& \unit{\percent}																						\\
-		Nuclease-free water				& 21.292		& \unit{\ml}			& \NA	&																						& \NA		&																										\\
+		\textbf{Compound}				& \multicolumn{2}{c}{\textbf{Quantity}}	& \multicolumn{2}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Initial\\concentration\end{tabular}}}	& \multicolumn{2}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Final concentration\\ (for \qty{10}{\ml})\end{tabular}}}	\\*[0.4cm]
+		Tris-\ce{HCl} (pH \num{7.5})	& 100			& \unit{\ul}			& 1		& \unit{\molar}																			& 10		& \unit{\milli\molar}																					\\
+		\ce{NaCl}						& 20			& \unit{\ul}			& 5		& \unit{\molar}																			& 10		& \unit{\milli\molar}																					\\
+		\ce{MgCl2}						& 30			& \unit{\ul}			& 1		& \unit{\molar}																			& 3			& \unit{\milli\molar}																					\\
+		BSA								& 1.333			& \unit{\ml}			& 7.5	& \unit{\percent}																		& 1			& \unit{\percent}																						\\
+		Dithiothreitol (DTT)			& 10			& \unit{\ul}			& 1		& \unit{\molar}																			& 1			& \unit{\milli\molar}																					\\
+		RNAse inhibitor					& 50			& \unit{\ul}			& 40	& \unit{\activeunit\per\ul}																& 0.2		& \unit{\activeunit\per\ul}																				\\
+		Nuclease-free water				& 8457			& \unit{\ml}			& \NA	&																						& \NA		&																										\\
 	\end{tabular}
 \end{table}
 
 \begin{enumerate}
 	\item Add Tris-\ce{HCl} (pH \num{7.5}), \ce{NaCl}, and \ce{MgCl2} to combin;
 	\item add BSA, mixing gently;
-	\item add nuclease-free water to reach a final volume of \qty{25}{\ml};
+	\item add nuclease-free water to reach a final volume of \qty{10}{\ml};
 	\item filter sterilise with a \qty{0.2}{\um} filter;
-	\item store at \qty{4}{\degreeCelsius} for 3--4 weeks, or at \qty{-20}{\degreeCelsius} for up to 6 months.
-\end{enumerate}
-
-\bigskip\alert{Avoid repeated freeze-thaw cycles. Thaw on ice. Mix gently to avoid foaming.}
-
-\subsection*{Working wash buffer}
-
-\begin{table}[H]
-	\centering
-	\begin{tabular}{r
-		S[table-format = 4.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
-		l
-		S[table-format = 3.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
-		l
-		S[table-format = 3.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
-		l
-		}
-		\textbf{Compound}				& \multicolumn{2}{c}{\textbf{Quantity}}	& \multicolumn{2}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Initial\\concentration\end{tabular}}}	& \multicolumn{2}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Final concentration\\ (for \qty[scientific-notation = false, group-digits = false]{1000}{\ul})\end{tabular}}}	\\*[0.4cm]
-		Dithiothreitol (DTT)			& 10	& \unit{\ul}					& 0.1	& \unit{\molar}																			& 0.001	& \unit{\molar}																																					\\
-		RNAse inhibitor					& 5		& \unit{\ul}					& 40	& \unit{\activeunit\per\ul}																& 0.2	& \unit{\activeunit\per\ul}																																		\\ 
-		Stock wash buffer				& 985	& \unit{\ul}					& \NA	&																						& \NA	& 																																								\\
-		\end{tabular}
-\end{table}
-
-\begin{enumerate}
-	\item Add DTT and RNAse inhibitor to the stock wash buffer.
+	\item use same day.
 \end{enumerate}
 
 \end{document}
-
-
