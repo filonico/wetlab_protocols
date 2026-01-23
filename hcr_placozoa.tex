@@ -1,0 +1,310 @@
+\documentclass[10pt]{report}
+\usepackage[utf8]{inputenc}
+
+\input{general_preamble}
+
+% DEFINE TITLE STYLES
+\makeatletter 
+\renewcommand\maketitle{
+{\begin{center}
+{\Large \bfseries \@title }\\
+{\small \emph{First created}: \DTMdisplaydate{2026}{01}{22}{-1}\hfill%
+\setstretch{1.0} \small \hfill \emph{Last update}: \today}
+%{\Large  \@author}\\[4ex] 
+\end{center}}} % Note the extra }
+\makeatother
+
+%-------------------------------------------------------------------------
+
+\begin{document}
+
+%\sisetup{parse-numbers = false}
+\DTMsetdatestyle{cvdateformat}
+
+\title{\vspace{-3em} Multiplexed mRNA \textit{in-situ} Hybridization Chain Reaction (HCR) in Placozoa}
+\maketitle
+\thispagestyle{plain}
+\markboth{HCR in Placozoa}{}
+
+\section*{\vspace{-1em} \textendash{} Protocol \textendash{}}
+\markright{Protocol}
+
+\subsection*{Sample fixation}
+
+\begin{enumerate}[series = steps]
+	\item Gently transfer Placozoa with a wide-boar pipette tip onto a small petri dish or a multi-well plate, and allow the animals to settle for \qtyrange{15}{30}{\minute}.
+	\item Remove as much culture water as possible, taking care of not exposing animals to air.
+	\item \step{fix}{\qty{> 12}{\hour} (overnight)}{the required amount}{fixative solution}{\fourdegree}
+\end{enumerate}
+
+\bigskip\alert{Prepare fresh fixative solution soon before usage.}
+
+\begin{enumerate}[resume = steps]
+	\item Gently transfer fixed samples into a \qty{1.5}{\ml} low-bind tube.
+	\item \step{wash}{\qtytimes{3}{10}{\minute}}{\fivehunmicrol{} (or \onemil)}{\pbs}{RT}
+	\item \step{dehydrate}{\qtytimes{4}{10}{\minute}}{\fivehunmicrol{} (or \onemil)}{ice-cold methanol}{RT}
+	\item Store samples at \minustwenty{} until usage.
+\end{enumerate}
+
+\subsection*{Day 1 \textendash{} Sample preparation}
+
+\alert{In each step, samples can be rocked on a nutator or on an orbital (horizontal) shaker.}
+\alert{Adding and removing solutions should be performed under a dissecting scope to avoid losing a large number of embryos.}
+
+\begin{enumerate}[series = steps]
+	\item Transfer \qtyrange{\sim 5}{10}{Placozoa} into each well of a 96 well plate.
+	\item Rehydrate samples for \underline{\qty{5}{\minute}} each with a graded series of \qty{250}{\ul} of \textbf{methanol (\qtylist{75;50;25}{\percent}) in PBST} at RT.
+	\item \step{wash}{\qty{5}{\minute}}{\qty{250}{\ul}}{PBST}{RT}
+	\item \step{rock}{\tenmin}{\qty{250}{\ul}}{\qty{10}{\ug\per\ml} proteinase K}{\qty{37}{\degreeCelsius}}
+	\item \step{wash}{two times without incubation}{\qty{250}{\ul}}{PBST}{RT}
+	\item \step{post-fix}{\quarter}{\qty{250}{\ul}}{\qty{4}{\percent} PFA}{RT}
+\end{enumerate}
+
+\bigskip\alert{Pre-heat probe-hybridization buffer to \thirtysevendegree{} (you will need \qty{200}{\ul} per tube [\qty{100}{\ul} for the pre-hybridization, and \qty{100}{\ul} for the probe solution]).}
+
+\begin{enumerate}[resume = steps]
+	\item \step{wash}{\qtytimes{4}{5}{\minute}}{\qty{250}{\ul}}{PBST}{RT}
+\end{enumerate}
+
+\subsection*{Day 1 \textendash{} HCR detection stage}
+\begin{enumerate}[series = steps]
+	\item \step{pre-hybridize}{\halfhour}{\qty{100}{\ul}}{pre-warmed probe hybridization buffer}{\thirtysevendegree}
+\end{enumerate}
+
+\bigskip\alert{If reusing probes, pre-warm probe solution to \thirtysevendegree, then skip to Step 3.}
+\alert{At this step, samples can be stored in probe hybridization buffer at \minustwenty{} for several months.}
+
+\begin{enumerate}[resume = steps]
+	\item Prepare probe solution by adding \qty{1}{\ul} (\qty{1}{\pmol}) of each \textbf{probe set \qty{1}{\micro\molar} stock solution} to \qty{100}{\ul} of \textbf{probe hybridization buffer} at \thirtysevendegree.
+	\item Add probe solution to the well to reach a final volume of \qty{200}{\ul} (final concentration of probes of \qty{5}{\nano\molar}).
+	\item Seal the plate with film and incubate samples for \underline{\qty{> 12}{\hour} (overnight)} at \thirtysevendegree.
+\end{enumerate}
+
+\bigskip\alert{Pre-heat probe wash buffer at \thirtysevendegree{} (you will need \qty{250}{\ul} per tube per 4 washes).}
+
+\subsection*{Day 2 \textendash{} HCR amplification stage}
+
+\alert{Pre-equilibrate amplification buffer to room temperature (you will need \qty{100}{\ul} per tube [\qty{50}{\ul} for pre-amplification, and \qty{50}{\ul} for the hairpin solution]).}
+
+\begin{enumerate}[series = steps]
+	\item \step{wash}{\qtytimes{4}{15}{\minute}}{\qty{250}{\ul}}{probe wash buffer}{\thirtysevendegree}
+\end{enumerate}
+
+\bigskip\alert{Probe solution can be saved and reused for 2--3 times; store at \minustwenty.}
+\alert{If probe solution is too dense and does not allow a safe removal without loosing samples, first add \qty{\sim 150}{\ul} of pre-warmed probe wash buffer, then proceed with step 1.}
+
+\begin{enumerate}[resume = steps]
+	\item \step{wash}{\qtytimes{2}{5}{\minute}}{\qty{250}{\ul}}{\ssct}{RT}
+	\item \step{pre-amplify}{\halfhour}{\qty{50}{\ul}}{amplification buffer}{RT}
+	\item Snap cool in separate tubes \qty{2}{\ul} of \textbf{hairpin H1} (\qty{6}{\pmol}) and \qty{2}{\ul} of \textbf{hairpin H2} (\qty{6}{\pmol}) \textbf{\qty{3}{\micro\molar} stock solutions}: heat at \qty{95}{\degreeCelsius} for \qty{90}{\s} and cool to RT in the dark for \halfhour.
+	      %\note{doubling hairpin concentration can help to boost signal.}
+\end{enumerate}
+
+\bigskip\alert{If reusing hairpin solutions, heat at \qty{95}{\degreeCelsius} and cool at RT, then skip at Step 6.}
+
+\begin{enumerate}[resume = steps]
+	\item Prepare hairpin solution by adding \textbf{snap-cooled H1 hairpins} and \textbf{snap-cooled H2 hairpins} to \qty{100}{\ul} of \textbf{amplification buffer} at RT.
+	\item Add hairpin solution to the well to reach a final volume of \qty{100}{\ul} (final concentration of each hairpin of \qty{60}{\nano\molar}).
+	\item Seal the plate with film and incubate samples for \underline{\qty{> 12}{\hour} (overnight)} at RT.
+\end{enumerate}
+
+\subsection*{Day 3 \textendash{} HCR conclusion}
+
+\begin{enumerate}[series = steps]
+	\item \step{wash}{\qtytimes{2}{5}{\minute}, \qtytimes{2}{30}{\minute}, and \qtytimes{1}{5}{\minute}}{\fivehunmicrol{} (or \onemil)}{\ssct}{RT}
+\end{enumerate}
+
+\bigskip\alert{dsDNA can be stained on the second \qty{30}{\minute} wash by using a 1:500 DAPI solution.}
+\alert{Hairpin solution can be saved and reused for 2--3 times; store at \minustwenty.}
+\alert{At this step, samples can be stored in the dark in \ssct for several days at room temperature.}
+
+\subsection*{Day 3 \textendash{} Sample mounting}
+
+\begin{enumerate}[series = steps]
+	\item \step{incubate}{\qtyrange{30}{60}{\minute}}{\onemil}{\qty{50}{\percent} glycerol in \pbs}{RT}
+	\item \step{incubate}{\qtyrange{30}{60}{\minute}}{\onemil}{\qty{75}{\percent} glycerol in \pbs}{RT}
+\end{enumerate}
+
+\bigskip\alert{Maintaining samples at pH 7.40 is critical for the stability of fluorophores and long-term storage of mRNA \textit{in-situ} HCR samples.}
+\alert{At this step, samples can be stored in the dark in \qty{75}{\percent} glycerol for several month at \fourdegree.}
+
+\begin{enumerate}[resume = steps]
+	\item Collect samples from the \qty{75}{\percent} glycerol solution and place them on a cleaned (bridged, if necessary) slide.
+	\item Add \qtyrange{\sim 15}{20}{\ul} of mounting medium (or VECTASHIELD\textregistered{} PLUS Antifade Mounting Medium with DAPI [H-2000]) directly on samples.
+\end{enumerate}
+
+\bigskip\alert{Adjust the amount of mounting medium according to the cover glass dimensions, the quantity of samples, and the thickness of the bridge.}
+
+\begin{enumerate}[resume = steps]
+	\item	Seal the slide with nail polish and store in the dark at \fourdegree.
+\end{enumerate}
+
+\clearpage
+
+\section*{\textendash{} Recipes \textendash{}}
+\setstretch{0.95}
+\markright{Recipes}
+
+\subsection*{\pbs{} with \qty{0.1}{\percent} Tween 20 (PBST or PTw)}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{r
+		S[table-format = 4.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
+		l
+		S[table-format = 3.2, table-align-text-post = false, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 2] % disable scientific notation
+		c
+		}
+		\textbf{Compound} & \multicolumn{2}{c}{\textbf{Quantity}} & \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Molar mass\\ (\unit{\g\per\mole})\end{tabular}}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}c@{}}Final concentration\\ (for \qty{50}{\ml})\end{tabular}}}                        \\*[0.4cm]
+		Tween 20          & 50                                    & \unit{\ul}                                                                                             & 1227.54                                                                                                        & \qty{0.1}{\percent} \\
+		20\per{} PBS      & 5                                     & \unit{\ml}                                                                                             & \NA                                                                                                            & 1\per{}              \\
+		Ultrapure water   & \multicolumn{2}{c}{\NA}               & \NA                                                                                                    & \NA
+	\end{tabular}
+\end{table}
+
+\begin{enumerate}
+	\item Add \qty{5}{\ml} of 20\per{} PBS to a graduated cylinder.
+	\item Add \qty{50}{\ul} of Tween 20.
+	\item Fill up to \qty{50}{\ml} with ultrapure water.
+\end{enumerate}
+
+\subsection*{5\per{} SSC \qty{0.1}{\percent} Tween 20 (SSCT)}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{r
+		S[table-format = 4.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
+		l
+		S[table-format = 3.2, table-align-text-post = false, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 2] % disable scientific notation
+		c
+		}
+		\textbf{Compound} & \multicolumn{2}{c}{\textbf{Quantity}} & \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Molar mass\\ (\unit{\g\per\mole})\end{tabular}}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}c@{}}Final concentration\\ (for \qty{50}{\ml})\end{tabular}}}                        \\*[0.4cm]
+		Tween 20          & 50                                    & \unit{\ul}                                                                                             & 1227.54                                                                                                        & \qty{0.1}{\percent} \\
+		20\per{} SSC      & 12.5                                  & \unit{\ml}                                                                                             & \NA                                                                                                            & 5\per{}              \\
+		Ultrapure water   & \multicolumn{2}{c}{\NA}               & \NA                                                                                                    & \NA
+	\end{tabular}
+\end{table}
+
+\begin{enumerate}
+	\item Add \qty{12.5}{\ml} of 20\per{} SSC to a graduated cylinder.
+	\item Add \qty{50}{\ul} of Tween 20.
+	\item Fill up to \qty{50}{\ml} with ultrapure water.
+\end{enumerate}
+
+\subsection*{Proteinase K working solution}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{r
+		S[table-format = 4.2, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 2]@{\,} % disable scientific notation
+		l
+		S[table-format = 3.2, table-align-text-post = false, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 2] % disable scientific notation
+		c
+		}
+		\textbf{Compound}                                                                                              & \multicolumn{2}{c}{\textbf{Quantity}} & \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Molar mass\\ (\unit{\g\per\mole})\end{tabular}}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}c@{}}Final concentration\\ (for \qty{10}{\ml})\end{tabular}}}                         \\*[0.4cm]
+		\multicolumn{1}{c}{\begin{tabular}[c]{@{}r@{}}\qty{20}{\mg\per\ml} proteinase K\\ stock solution\end{tabular}} & 1.3                                   & \unit{\ul}                                                                                             & \NA                                                                                                            & \qty{2.6}{\ug\per\ml} \\*[0.4cm]
+		PBST                                                                                                           & \multicolumn{2}{c}{\NA}               & \NA                                                                                                    & \NA
+	\end{tabular}
+\end{table}
+
+\begin{enumerate}
+	\item Add \qty{1.3}{\ul} of \qty{20}{\mg\per\ml} proteinase K stock solution to \qty{8}{\ml} of PBST.
+	\item Fill up to \qty{10}{\ml} with PBST.
+\end{enumerate}
+
+\subsection*{Urea-based probe hybridization buffer}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{r
+		S[table-format = 4.2, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 2]@{\,} % disable scientific notation
+		l
+		S[table-format = 3.2, table-align-text-post = false, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 2] % disable scientific notation
+		c
+		}
+		\textbf{Compound}                                                                                              & \multicolumn{2}{c}{\textbf{Quantity}} 						& \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Molar mass\\ (\unit{\g\per\mole})\end{tabular}}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}c@{}}Final concentration\\ (for \qty{10}{\ml})\end{tabular}}}                         \\*[0.4cm]
+		Urea																										   & 2.4                                   & \unit{\g}			& 60.06                                                                                            		 & \qty{4}{\molar} 																														  \\
+		20\per{} SSC                                                                                                   & 2.5                                   & \unit{\ml}         & \NA{}                                                                                  				 & 5\per{}																																  \\
+		\qty{1}{\molar} citric acid																			           & 90									   & \unit{\ul}			& 192.124																								 & \qty{9}{\milli\molar}																												  \\
+		Tween-20																									   & 10									   & \unit{\ul}			& 1227.54																							     & \qty{0.1}{\percent}                                                                                                                    \\
+		50\per{} Denhardts's solution																				   & 200								   & \unit{\ul}			& \NA{}																									 & 1\per{}																																  \\
+		\qty{50}{\percent} dextran sulfate																	           & 2   								   & \unit{\ml}			& \NA{}																									 & \qty{10}{\percent}																													  \\
+		\qty{10}{\mg\per\ml} heparin																				   & 50									   & \unit{\ul}			& \NA{}																									 & \qty{50}{\ug\per\ml}																													  \\
+	\end{tabular}
+\end{table}
+
+\begin{enumerate}
+	\item Add \qty{2.4}{\g} of urea to a becker.
+	\item Combine all the other components fresh.
+	\item Stir thoroughly to allow complete solubilization of urea.
+	\item Fill up to \qty{10}{\ml} with ultrapure water.
+\end{enumerate}
+
+\subsection*{Urea-based probe wash buffer}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{r
+		S[table-format = 4.2, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 2]@{\,} % disable scientific notation
+		l
+		S[table-format = 3.2, table-align-text-post = false, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 2] % disable scientific notation
+		c
+		}
+		\textbf{Compound}                                                                                              & \multicolumn{2}{c}{\textbf{Quantity}} 						& \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Molar mass\\ (\unit{\g\per\mole})\end{tabular}}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}c@{}}Final concentration\\ (for \qty{10}{\ml})\end{tabular}}}                         \\*[0.4cm]
+		Urea																										   & 2.4                                   & \unit{\g}			& 60.06                                                                                            		 & \qty{4}{\molar} 																														  \\
+		20\per{} SSC                                                                                                   & 2.5                                   & \unit{\ml}         & \NA{}                                                                                  				 & 5\per{}																																  \\
+		\qty{1}{\molar} citric acid																			           & 90									   & \unit{\ul}			& 192.124																								 & \qty{9}{\milli\molar}																												  \\
+		Tween-20																									   & 10									   & \unit{\ul}			& 1227.54																							     & \qty{0.1}{\percent}                                                                                                                    \\
+		\qty{10}{\mg\per\ml} heparin																				   & 50									   & \unit{\ul}			& \NA{}																									 & \qty{50}{\ug\per\ml}																													  \\
+	\end{tabular}
+\end{table}
+
+\begin{enumerate}
+	\item Add \qty{2.4}{\g} of urea to a becker.
+	\item Combine all the other components fresh.
+	\item Stir thoroughly to allow complete solubilization of urea.
+	\item Fill up to \qty{10}{\ml} with ultrapure water.
+\end{enumerate}
+
+
+\subsection*{1:500 DAPI staining solution}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{r
+		S[table-format = 4.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
+		l
+		S[table-format = 3.2, table-align-text-post = false, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 2] % disable scientific notation
+		c
+		}
+		\textbf{Compound} & \multicolumn{2}{c}{\textbf{Quantity}} & \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Molar mass\\ (\unit{\g\per\mole})\end{tabular}}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}c@{}}Final concentration\\ (for \qty{500}{\ul})\end{tabular}}}         \\*[0.4cm]
+		DAPI              & 1                                     & \unit{\ul}                                                                                             & \NA                                                                                                             & 1:500 \\
+		\pbs{}            & 499                                   & \unit{\ul}                                                                                             & \NA                                                                                                             & \NA
+	\end{tabular}
+\end{table}
+
+\clearpage
+
+\section*{\textendash{} Resources \textendash{}}
+\markright{Resources}
+
+\begin{enumerate}
+	\item \textbf{ISH/IHC in \textit{Mnemiopsis leidyi}.}
+		\begin{itemize}
+			\item Burkhardt, P., Colgren, J., Medhus, A., Digel, L., Naumann, B., Soto-Angel, J. J., ... \& Kittelmann, M. (2023). Syncytial nerve net in a ctenophore adds insights on the evolution of nervous systems. \textit{Science}, \textit{380}(6642), 293-297. \ulhref{https://doi.org/10.1126/science.ade5645}{10.1126/science.ade5645}
+			\item Mitchell, D. G., Edgar, A., Mateu, J. R., Ryan, J. F., \& Martindale, M. Q. (2024). The ctenophore \textit{Mnemiopsis leidyi} deploys a rapid injury response dating back to the last common animal ancestor. \textit{Communications Biology}, \textit{7}(1), 203. \ulhref{https://doi.org/10.1038/s42003-024-05901-7}{10.1038/s42003-024-05901-7}
+			\item Moroz, L. L., \& Kohn, A. B. (2015). Analysis of gene expression in neurons and synapses by multi-color \textit{in situ} hybridization. \textit{In Situ Hybridization Methods}, 293-317.
+			\item Pang, K., \& Martindale, M. Q. (2008). Ctenophore whole-mount \textit{in situ} hybridization. \textit{Cold Spring Harbor Protocols}, \textit{2008}(11), pdb-prot5087. \ulhref{https://doi.org/10.1101/pdb.prot5087}{10.1101/pdb.prot5087}
+			\item Sachkova, M. Y., Nordmann, E. L., Soto-Àngel, J. J., Meeda, Y., Górski, B., Naumann, B., ... \& Burkhardt, P. (2021). Neuropeptide repertoire and 3D anatomy of the ctenophore nervous system. \textit{Current Biology}, \textit{31}(23), 5274-5285. \ulhref{https://doi.org/10.1016/j.cub.2021.09.005}{10.1016/j.cub.2021.09.005}
+		\end{itemize}
+	\item \textbf{ISH with urea-based buffers}
+		\begin{itemize}
+			\item Aguillon, R., Rinsky, M., Simon-Blecher, N., Doniger, T., Appelbaum, L., \& Levy, O. (2024). CLOCK evolved in cnidaria to synchronize internal rhythms with diel environmental cues. \textit{Elife}, \textit{12}, RP89499. \ulhref{https://doi.org/10.7554/eLife.89499.4}{10.7554/eLife.89499.4}
+			\item Sinigaglia, C., Thiel, D., Hejnol, A., Houliston, E., \& Leclère, L. (2018). A safer, urea-based in situ hybridization method improves detection of gene expression in diverse animal species. \textit{Developmental biology}, \textit{434}(1), 15-23. \ulhref{https://doi.org/10.1016/j.ydbio.2017.11.015}{10.1016/j.ydbio.2017.11.015}
+		\end{itemize}
+\end{enumerate}
+
+
+\end{document}
+
+
