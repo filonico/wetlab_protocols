@@ -87,6 +87,7 @@
 \alert{Pre-equilibrate amplification buffer to room temperature (you will need \qty{100}{\ul} per tube [\qty{50}{\ul} for pre-amplification, and \qty{50}{\ul} for the hairpin solution]).}
 
 \begin{enumerate}[series = steps]
+	\item Add \qty{\sim 150}{\ul} of probe wash buffer to the sample and incubate for \tenmin.
 	\item \step{wash}{\qtytimes{4}{15}{\minute}}{\qty{250}{\ul}}{probe wash buffer}{\thirtysevendegree}
 \end{enumerate}
 
@@ -111,7 +112,8 @@
 \subsection*{Day 3 \textendash{} HCR conclusion}
 
 \begin{enumerate}[series = steps]
-	\item \step{wash}{\qtytimes{2}{5}{\minute}, \qtytimes{2}{30}{\minute}, and \qtytimes{1}{5}{\minute}}{\fivehunmicrol{} (or \onemil)}{\ssct}{RT}
+	\item Add \qty{\sim 150}{\ul} of \ssct to the sample and incubate for \tenmin.
+	\item \step{wash}{\qtytimes{2}{5}{\minute} and \qtytimes{2}{30}{\minute}}{\qty{250}{\ul}}{\ssct}{RT}
 \end{enumerate}
 
 \bigskip\alert{dsDNA can be stained on the second \qty{30}{\minute} wash by using a 1:500 DAPI solution.}
@@ -121,16 +123,9 @@
 \subsection*{Day 3 \textendash{} Sample mounting}
 
 \begin{enumerate}[series = steps]
-	\item \step{incubate}{\qtyrange{30}{60}{\minute}}{\onemil}{\qty{50}{\percent} glycerol in \pbs}{RT}
-	\item \step{incubate}{\qtyrange{30}{60}{\minute}}{\onemil}{\qty{75}{\percent} glycerol in \pbs}{RT}
-\end{enumerate}
-
-\bigskip\alert{Maintaining samples at pH 7.40 is critical for the stability of fluorophores and long-term storage of mRNA \textit{in-situ} HCR samples.}
-\alert{At this step, samples can be stored in the dark in \qty{75}{\percent} glycerol for several month at \fourdegree.}
-
-\begin{enumerate}[resume = steps]
-	\item Collect samples from the \qty{75}{\percent} glycerol solution and place them on a cleaned (bridged, if necessary) slide.
-	\item Add \qtyrange{\sim 15}{20}{\ul} of mounting medium (or VECTASHIELD\textregistered{} PLUS Antifade Mounting Medium with DAPI [H-2000]) directly on samples.
+	\item \step{incubate}{\qtyrange{30}{60}{\minute}}{\qty{250}{\ul}}{\qty{50}{\percent} glycerol in \pbs}{RT}
+	\item \step{incubate}{\qtyrange{30}{60}{\minute}}{\qty{\sim 250}{\ul}}{anti-fade mounting medium}{RT}
+	\item Collect samples and place them on a cleaned (bridged, if necessary) slide.
 \end{enumerate}
 
 \bigskip\alert{Adjust the amount of mounting medium according to the cover glass dimensions, the quantity of samples, and the thickness of the bridge.}
@@ -144,6 +139,60 @@
 \section*{\textendash{} Recipes \textendash{}}
 \setstretch{0.95}
 \markright{Recipes}
+
+\subsection*{10\per{} PHEM buffer}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{r
+		S[table-format = 4.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
+		l
+		S[table-format = 3.2, table-align-text-post = false, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 2] % disable scientific notation
+		c
+		}
+		\textbf{Compound}				& \multicolumn{2}{c}{\textbf{Quantity}}	& \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Molar mass\\ (\unit{\g\per\mole})\end{tabular}}}	& \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}c@{}}Final concentration\\ (for \qty{50}{\ml})\end{tabular}}}	\\*[0.4cm]
+		PIPES							& 9.07	& \unit{\g}						& 302.37																									& \qty{600}{\milli\molar}																							\\
+		HEPES							& 2.98	& \unit{\g}						& 238.3                                                                                     				& \qty{250}{\milli\molar}              																				\\
+		\qty{0.5}{\molar} EGTA pH 0.8	& 10	& \unit{\ml}					& 380.35                                                                                     				& \qty{100}{\milli\molar}              																				\\
+		\qty{1}{\molar} \ce{MgCl2}      & 1		& \unit{\ml}					& 95.211                                                                                     				& \qty{20}{\milli\molar}              																				\\
+		Ultrapure water					& \multicolumn{2}{c}{\NA}               & \NA                                                                                                    	& \NA																												\\
+	\end{tabular}
+\end{table}
+
+\begin{enumerate}
+	\item Combine \qty{9.07}{\g} of PIPES and \qty{2.98}{\g} of HEPES into a becker.
+	\item Add \qty{25}{\ml} of ultrapure water to the becker and start stirring gently with a magnetic stirrer.
+	\item Add \qty{10}{\ml} of \qty{0.5}{\molar} EGTA pH 0.8 and \qty{1}{\ml} of \qty{1}{\molar} \ce{MgCl2}.
+	\item Gently raise the pH of the solution to 7.5 by adding \ce{KOH} to allow full solubilization of components.
+	\item Transfer the solution to a graduated cylinder and fill up to \qty{50}{\ml} with ultrapure water.
+	\item Filter the solution through a \qty{0.22}{\um} filter. Autoclave if required.
+\end{enumerate}
+
+
+\subsection*{Fixative solution}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{r
+		S[table-format = 4.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
+		l
+		S[table-format = 3.2, table-align-text-post = false, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 2] % disable scientific notation
+		c
+		}
+		\textbf{Compound}						& \multicolumn{2}{c}{\textbf{Quantity}}	& \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Molar mass\\ (\unit{\g\per\mole})\end{tabular}}}	& \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}c@{}}Final concentration\\ (for \qty{20}{\ml})\end{tabular}}}	\\*[0.4cm]
+		10\per{} PHEM buffer					& 3		& \unit{\ml}					& \NA																										& 1.5\per{}																											\\
+		\qty{37}{\percent}	(para)formaldehyde	& 2.16	& \unit{\ml}					& 30.031                                                                                     				& \qty{4}{\percent}              																					\\
+		Ultrapure water							& \multicolumn{2}{c}{\NA}               & \NA                                                                                                    	& \NA																												\\
+	\end{tabular}
+\end{table}
+
+\begin{enumerate}
+	\item Combine \qty{3}{\ml} of 10\per{} PHEM buffer and \qty{2.16}{\ml} of \qty{37}{\percent} (para)formaldehyde into a graduated cylinder.
+	\item Fill up to \qty{20}{\ml} with ultrapure water.
+	\item Use fresh.	
+\end{enumerate}
+
+
 
 \subsection*{\pbs{} with \qty{0.1}{\percent} Tween 20 (PBST or PTw)}
 
@@ -166,6 +215,7 @@
 	\item Add \qty{5}{\ml} of 20\per{} PBS to a graduated cylinder.
 	\item Add \qty{50}{\ul} of Tween 20.
 	\item Fill up to \qty{50}{\ml} with ultrapure water.
+	\item Filter the solution through a \qty{0.22}{\um} filter. Autoclave if required.
 \end{enumerate}
 
 \subsection*{5\per{} SSC \qty{0.1}{\percent} Tween 20 (SSCT)}
@@ -189,6 +239,7 @@
 	\item Add \qty{12.5}{\ml} of 20\per{} SSC to a graduated cylinder.
 	\item Add \qty{50}{\ul} of Tween 20.
 	\item Fill up to \qty{50}{\ml} with ultrapure water.
+	\item Filter the solution through a \qty{0.22}{\um} filter. Autoclave if required.
 \end{enumerate}
 
 \subsection*{Proteinase K working solution}
@@ -202,13 +253,13 @@
 		c
 		}
 		\textbf{Compound}                                                                                              & \multicolumn{2}{c}{\textbf{Quantity}} & \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Molar mass\\ (\unit{\g\per\mole})\end{tabular}}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}c@{}}Final concentration\\ (for \qty{10}{\ml})\end{tabular}}}                         \\*[0.4cm]
-		\multicolumn{1}{c}{\begin{tabular}[c]{@{}r@{}}\qty{20}{\mg\per\ml} proteinase K\\ stock solution\end{tabular}} & 1.3                                   & \unit{\ul}                                                                                             & \NA                                                                                                            & \qty{2.6}{\ug\per\ml} \\*[0.4cm]
+		\multicolumn{1}{c}{\begin{tabular}[c]{@{}r@{}}\qty{20}{\mg\per\ml} proteinase K\\ stock solution\end{tabular}} & 5.0                                   & \unit{\ul}                                                                                             & \NA                                                                                                            & \qty{10}{\ug\per\ml} \\*[0.4cm]
 		PBST                                                                                                           & \multicolumn{2}{c}{\NA}               & \NA                                                                                                    & \NA
 	\end{tabular}
 \end{table}
 
 \begin{enumerate}
-	\item Add \qty{1.3}{\ul} of \qty{20}{\mg\per\ml} proteinase K stock solution to \qty{8}{\ml} of PBST.
+	\item Add \qty{5}{\ul} of \qty{20}{\mg\per\ml} proteinase K stock solution to \qty{8}{\ml} of PBST.
 	\item Fill up to \qty{10}{\ml} with PBST.
 \end{enumerate}
 
@@ -289,21 +340,11 @@
 \markright{Resources}
 
 \begin{enumerate}
-	\item \textbf{ISH/IHC in \textit{Mnemiopsis leidyi}.}
+	\item \textbf{HCR in Placozoa}
 		\begin{itemize}
-			\item Burkhardt, P., Colgren, J., Medhus, A., Digel, L., Naumann, B., Soto-Angel, J. J., ... \& Kittelmann, M. (2023). Syncytial nerve net in a ctenophore adds insights on the evolution of nervous systems. \textit{Science}, \textit{380}(6642), 293-297. \ulhref{https://doi.org/10.1126/science.ade5645}{10.1126/science.ade5645}
-			\item Mitchell, D. G., Edgar, A., Mateu, J. R., Ryan, J. F., \& Martindale, M. Q. (2024). The ctenophore \textit{Mnemiopsis leidyi} deploys a rapid injury response dating back to the last common animal ancestor. \textit{Communications Biology}, \textit{7}(1), 203. \ulhref{https://doi.org/10.1038/s42003-024-05901-7}{10.1038/s42003-024-05901-7}
-			\item Moroz, L. L., \& Kohn, A. B. (2015). Analysis of gene expression in neurons and synapses by multi-color \textit{in situ} hybridization. \textit{In Situ Hybridization Methods}, 293-317.
-			\item Pang, K., \& Martindale, M. Q. (2008). Ctenophore whole-mount \textit{in situ} hybridization. \textit{Cold Spring Harbor Protocols}, \textit{2008}(11), pdb-prot5087. \ulhref{https://doi.org/10.1101/pdb.prot5087}{10.1101/pdb.prot5087}
-			\item Sachkova, M. Y., Nordmann, E. L., Soto-Àngel, J. J., Meeda, Y., Górski, B., Naumann, B., ... \& Burkhardt, P. (2021). Neuropeptide repertoire and 3D anatomy of the ctenophore nervous system. \textit{Current Biology}, \textit{31}(23), 5274-5285. \ulhref{https://doi.org/10.1016/j.cub.2021.09.005}{10.1016/j.cub.2021.09.005}
-		\end{itemize}
-	\item \textbf{ISH with urea-based buffers}
-		\begin{itemize}
-			\item Aguillon, R., Rinsky, M., Simon-Blecher, N., Doniger, T., Appelbaum, L., \& Levy, O. (2024). CLOCK evolved in cnidaria to synchronize internal rhythms with diel environmental cues. \textit{Elife}, \textit{12}, RP89499. \ulhref{https://doi.org/10.7554/eLife.89499.4}{10.7554/eLife.89499.4}
-			\item Sinigaglia, C., Thiel, D., Hejnol, A., Houliston, E., \& Leclère, L. (2018). A safer, urea-based in situ hybridization method improves detection of gene expression in diverse animal species. \textit{Developmental biology}, \textit{434}(1), 15-23. \ulhref{https://doi.org/10.1016/j.ydbio.2017.11.015}{10.1016/j.ydbio.2017.11.015}
+			\item Najle, S. R., Grau-Bové, X., Elek, A., Navarrete, C., Cianferoni, D., Chiva, C., ... \& Sebé-Pedrós, A. (2023). Stepwise emergence of the neuronal gene expression program in early animal evolution. \textit{Cell}, \textit{186}(21), 4676-4693. \ulhref{https://doi.org/10.1016/j.cell.2023.08.027}{10.1016/j.cell.2023.08.027}
 		\end{itemize}
 \end{enumerate}
-
 
 \end{document}
 
