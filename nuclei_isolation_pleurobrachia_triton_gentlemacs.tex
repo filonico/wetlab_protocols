@@ -1,0 +1,234 @@
+\documentclass[10pt]{report}
+\usepackage[utf8]{inputenc}
+
+\input{general_preamble}
+
+% DEFINE TITLE STYLES
+\makeatletter 
+\renewcommand\maketitle{
+{\begin{center}
+{\Large \bfseries \@title }\\
+{\small \emph{First created}: \DTMdisplaydate{2026}{01}{30}{-1}\hfill%
+\setstretch{1.0} \small \hfill \emph{Last update}: \today}
+%{\Large  \@author}\\[4ex] 
+\end{center}}} % Note the extra }
+\makeatother
+
+%-------------------------------------------------------------------------
+
+\begin{document}
+
+%\sisetup{parse-numbers = false}
+\DTMsetdatestyle{cvdateformat}
+
+\title{\vspace{-3em} Nuclei isolation from flash-frozen \emph{Pleurobrachia} samples (using gentleMACS\textregistered{})}
+\maketitle
+\thispagestyle{plain}
+\markboth{Nuclei isolation from frozen \emph{Pleurobrachia}}{}
+
+\section*{\vspace{-1em} \textendash{} Protocol \textendash{}}
+\markright{Protocol}
+
+\subsection*{Materials}
+\begin{multicols}{2}
+\begin{todolist}
+	\item BSA \qty{7.5}{\percent}
+	\item Buffer, homogenization
+	\item Buffer, wash
+	\item Cell strainer \qty{30}{\um} (MACS\textregistered{} SmartStrainers)
+	\item Cell strainer \qty{10}{\um} (pluriSelect pluriStrainer Mini)
+	\item Dissecting needles
+	\item DTT
+	\item Eppendorfs \qty{0.5}{\ml}
+	\item Eppendorfs \qty{2}{\ml}
+	\item Eppendorfs \qty{2}{\ml} low bind
+	\item Falcon tubes \qty{15}{\ml} low bind
+	\item gentleMACS\textregistered{} C-tubes
+	\item Gloves
+	\item Ice boxes
+	\item Nuclease-free water
+	\item Petri dish
+	\item Pipettes
+	\item RNaseZap\texttrademark{}
+	\item IMS
+	\item Samples
+	\item Surgical scalpel blades (sterile)
+	\item Tips \qty[scientific-notation = false, group-digits = false]{1000}{\ul}
+	\item Tips \qty[scientific-notation = false, group-digits = false]{1000}{\ul} low retention
+	\item Tips \qty{200}{\ul} 
+	\item Tips \qty{200}{\ul} low retention
+	\item Tips \qty{20}{\ul}
+	\item Tips \qty{10}{\ul}
+	\item AO/PI dye
+	\item Tweezers
+\end{todolist}
+\end{multicols}
+
+\clearpage
+
+\subsection*{Procedure}
+
+\alert{Make sure to set the temperature of the \qty{4}{\degreeCelsius} centrifuge beforehand.}
+\alert{Make sure to place the gentleMACS\textregistered{} machine in the cold room beforehand.}
+\alert{Always \textbf{work on ice}, unless otherwise specified.}
+\alert{Always keep the working environment and materials as much \textbf{RNase-free} as possible.}
+\alert{Place all the working solutions, tubes, and homogenizers on ice before starting.}
+\alert{Keep the frozen samples at \qty{-80}{\degreeCelsius} until use. Otherwise, place them in dry ice.}
+
+\begin{enumerate}[series = steps]
+	\item Add \textbf{\qty{4}{\ml} of homogenization buffer} into a gentleMACS\textregistered{} C-tube; keep in ice.
+	\item Move materials ands yourslef to the cold room.
+	\item Cut samples into small pieces, but try to not thaw them: work on a Petri dish placed on dry ice and use a sterile scaple with forceps.
+	\item Transfer the chopped samples into the C-tube and place on the gentleMACS\textregistered{} machine.
+	\item Homogenize samples with 5 cycles of the program \singlecurlyquotes{m\_brain\_03.01} (runs for \qty{1}{\minute}).
+\end{enumerate}
+
+\bigskip\alert{This program is available on the gentleMACS\textregistered{} machine v1.02. Newer machines have programs specific for nuclei isolation.}
+	
+\begin{enumerate}[resume = steps]
+	\item Incubate homogenized samples on ice for \qty{5}{\minute}.
+	\item Filter the homogenized samples through a \qty{30}{\um} MACS\textregistered{} cell strainer into a \qty{15}{\ml} low-bind falcon tube; use a wide-boar \qty{1000}{\ul} pipette tip.
+	\item Wash the MACS\textregistered{} C-tube and cell strainer with leftover homogenization buffer.
+	\item Centrifuge sample at \qty{500}{\g} for \qty{10}{\minute} at \fourdegree.
+	\item Remove and discard the supernatant.
+\end{enumerate}
+
+\bigskip\alert{At this stage, if having multiple tubes with nuclei originating from the same sample, or if samples do not yield enough nuclei, the suspensions can be merged into a single new falcon tube.}
+	
+\begin{enumerate}[resume = steps]
+	\item Resuspend samples in \textbf{\qty{1.5}{\ml} of nuclei wash/suspension buffer} (change this buffer according to the desired single-nuclei protocol).
+	\item Centrifuge sample at \qty{500}{\g} for \qty{10}{\minute} at \fourdegree.
+	\item Remove and discard the supernatant.
+	\item If needed, filter samples through a \qty{10}{\um} pluriSelect pluriStrainer Mini cell strainer into a \qty{15}{\ml} low-bind falcon tube.
+\end{enumerate}
+
+\bigskip\alert{\qty{10}{\um} cell strainer may result in significant sample loss, as they get clogged very easily: ensure that the suspension is clean enough. If the cell strainer gets clogged, try to spin the tube with the strainer on top in the \fourdegree{} centrifuge.}
+
+\begin{enumerate}[resume = steps]
+	\item Remove and discard the supernatant, leaving behind \qty{~25}{\ul} of wash/suspension in the tube.
+	\item Add \qty{15}{\ul} of nuclei wash/suspension buffer to reach a final volume of \qty{~40}{\ul}.
+	\item Check nuclei quality and number using an automated counter and an AO/PI staining (1:1 dilution).
+	\item Proceed directly to the single-cell capture protocol.
+\end{enumerate}
+
+\bigskip\alert{The suspension final volume should be adjusted according to the sample yield, in order to get a final nuclei concentration of \qty{~5000}{cells\per\ul}}.
+
+\clearpage
+
+\section*{\textendash{} Recipes \textendash{}}
+\setstretch{0.95}
+\markright{Recipes}
+
+\subsection*{Working homogenization buffer}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{r
+		S[table-format = 4.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
+		l
+		S[table-format = 3.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
+		l
+		S[table-format = 3.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
+		l
+		}
+		\textbf{Compound}				& \multicolumn{2}{c}{\textbf{Quantity}}	& \multicolumn{2}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Initial\\concentration\end{tabular}}}	& \multicolumn{2}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Final concentration\\ (for \qty{10}{\ml})\end{tabular}}}	\\*[0.4cm]
+		Sucrose							& 2.5			& \unit{\ml}			& 1		& \unit{\molar}																			& 250		& \unit{\milli\molar}																					\\
+		\ce{KCl}						& 0.25			& \unit{\ml}			& 1		& \unit{\molar}																			& 25		& \unit{\milli\molar}																					\\
+		\ce{MgCl2}						& 0.05			& \unit{\ml}			& 1		& \unit{\molar}																			& 5			& \unit{\milli\molar}																					\\
+		Tris-\ce{HCl} (pH \num{8.0})	& 0.1			& \unit{\ml}			& 1		& \unit{\molar}																			& 10		& \unit{\milli\molar}																					\\
+		Triton X-100					& 0.03			& \unit{\ml}			& 1		& \unit{\molar}																			& 3			& \unit{\milli\molar}																					\\
+		Dithiothreitol (DTT)			& 0.1			& \unit{\ml}			& 0.1	& \unit{\molar}																			& 1			& \unit{\milli\molar}																					\\
+		RNAse inhibitor					& 0.2			& \unit{\ml}			& 40	& \unit{\activeunit\per\ul}																& 0.8		& \unit{\activeunit\per\ul}																				\\
+		Protease inhibitor (\#15614189)	& 1				& tablet				& \NA	& 																						& \NA		&																										\\
+		Nuclease-free water				& 5770			& \unit{\ml}			& \NA	&																						& \NA		&																										\\
+	\end{tabular}
+\end{table}
+
+\begin{enumerate}
+	\item Thoroughly dissolve 1 tablet of protease inhibitor in \qty{1}{\ml} of nuclease-free water, by vigorously vortexin in a \qty{1.5}{\ml} eppendorf tube;
+	\item add \qty{0.3}{\ml} of Triton X-100 to the protease inhibitor solution (dissolve the Triton X-100 by gentle pipetting to avoid bubbling);
+	\item keep the protease inhibitor solution on ice;
+	\item add \qty{2.5}{\ml} of \qty{1}{\molar} sucrose to a \qty{15}{\ml} falcon tube;
+	\item add \qty{0.05}{\ml} of \qty{1}{\molar} \ce{MgCl2};
+	\item add \qty{0.25}{\ml} of \qty{1}{\molar} \ce{KCl};
+	\item add \qty{0.1}{\ml} of \qty{1}{\molar} Tris-\ce{HCl} (pH \num{8.0});
+	\item add \qty{0.1}{\ml} of \qty{0.1}{\molar} DTT;
+	\item add \qty{0.2}{\ml} of RNAse inhibitor;
+	\item if available, add spermine to a final concentration of \qty{1}{\milli\molar};
+	\item gently add the protease solution to the falcon tube;
+	\item fill up to \qty{10}{\ml} by adding the remaining nuclease-free water;
+	\item filter with a \qty{0.2}{\um} syringe filter.
+	\item keep the working solution on ice.	
+\end{enumerate}
+
+\subsection*{Working nuclei wash buffer (for general testing of the protocol)}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{r
+		S[table-format = 4.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
+		l
+		S[table-format = 3.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
+		l
+		S[table-format = 3.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
+		l
+		}
+		\textbf{Compound}				& \multicolumn{2}{c}{\textbf{Quantity}}	& \multicolumn{2}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Initial\\concentration\end{tabular}}}	& \multicolumn{2}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Final concentration\\ (for \qty{2}{\ml})\end{tabular}}}		\\*[0.4cm]
+		DPBS							& 0.2			& \unit{\ml}			& 10	& \per{}																				& 1			& \per{}																								\\
+		BSA								& 0.55			& \unit{\ml}			& 7.5	& \unit{\percent}																		& 2			& \unit{\percent}																						\\
+		\ce{MgCl2}						& 0.01			& \unit{\ml}			& 1		& \unit{\molar}																			& 5			& \unit{\milli\molar}																					\\
+		RNAse inhibitor					& 0.02			& \unit{\ml}			& 40	& \unit{\activeunit\per\ul}																& 0.4		& \unit{\activeunit\per\ul}																				\\
+		Nuclease-free water				& 1.22			& \unit{\ml}			& \NA	&																						& \NA		&																										\\
+	\end{tabular}
+\end{table}
+
+\begin{enumerate}
+	\item Add \qty{0.2}{\ml} of 10\per{} DPBS to a \qty{2}{\ml} eppendorf tube;
+	\item add BSA, \ce{MgCl2}, and RNAse inhibitor;
+	\item add nuclease-free water to reach a final volume of \qty{2}{\ml};
+	\item filter with a \qty{0.2}{\um} syringe filter;
+	\item keep on ice.
+\end{enumerate}
+
+\subsection*{Working nuclei suspension buffer (for using before the PIPseq protocol)}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{r
+		S[table-format = 4.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
+		l
+		S[table-format = 3.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
+		l
+		S[table-format = 3.1, exponent-mode = fixed, fixed-exponent = 0, round-mode = places, round-precision = 1]@{\,} % disable scientific notation
+		l
+		}
+		\textbf{Compound}						& \multicolumn{2}{c}{\textbf{Quantity}}	& \multicolumn{2}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Initial\\concentration\end{tabular}}}	& \multicolumn{2}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Final concentration\\ (for \qty{2}{\ml})\end{tabular}}}		\\*[0.4cm]
+		Illumina Nuclei suspension buffer (NSB)	& 334			& \unit{\ul}			& 6		& \per{}																				& 1			& \per{}																								\\
+		BSA										& 80			& \unit{\ul}			& 25	& \unit{\percent}																		& 1			& \unit{\percent}																						\\
+		RNAse inhibitor							& 40			& \unit{\ul}			& 40	& \unit{\activeunit\per\ul}																& 0.8		& \unit{\activeunit\per\ul}																				\\
+		Nuclease-free water						& 1546			& \unit{\ul}			& \NA	&																						& \NA		&																										\\
+	\end{tabular}
+\end{table}
+
+\begin{enumerate}
+	\item Add \qty{334}{\ul} of Illumina 6\per{} NSB to a \qty{2}{\ml} eppendorf tube (6\per{} NSB should be provided with the PIPseq kit);
+	\item add BSA and RNAse inhibitor;
+	\item add nuclease-free water to reach a final volume of \qty{2}{\ml};
+	\item filter with a \qty{0.2}{\um} syringe filter;
+	\item keep on ice.
+\end{enumerate}
+
+\clearpage
+
+\section*{\textendash{} Resources \textendash{}}
+\markright{Resources}
+
+\begin{enumerate}
+	\item \textbf{Single-nuclei isolation from a marine organism.}
+		\begin{itemize}
+			\item Paganos, P., Ullrich-Lüter, J., Almazán, A., Voronov, D., Carl, J., Zakrzewski, A. C., ... \& Arnone, M. I. (2025). Single-nucleus profiling highlights the all-brain echinoderm nervous system. \textit{Science Advances}, \textit{11}(45), eadx7753. \ulhref{https://doi.org/10.1126/sciadv.adx7753}{10.1126/sciadv.adx7753}
+		\end{itemize}
+\end{enumerate}
+
+
+\end{document}
